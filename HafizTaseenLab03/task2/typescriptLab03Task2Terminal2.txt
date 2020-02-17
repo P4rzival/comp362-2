@@ -1,0 +1,34 @@
+Script started on 2020-02-16 23:13:26-08:00 [TERM="xterm-256color" TTY="/dev/tty2" COLUMNS="117" LINES="30"]
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ exit[Kexitsudo gdb -p 1301 iamexit[Ksudo gdb -p 1300 iamexit[K./proc_hier [5Pcd bin/[3Pmakecmake ..d cmake-build-debug/exit[Kps -elf | grep "proc_hier\|iam"[11Pkill -KILL 1302 1304ps -elf | grep "proc_hier\|iam"[11Pkill -KILL 1302 1304ps -elf | grep "proc_hier\|iam"
+0 S parzival  1301     1  5  80   0 -  2632 -      23:00 ?        00:00:43 [01;31m[Kiam[m[K 1.2
+0 R parzival  1303  1301 96  80   0 -  2632 -      23:00 ?        00:13:13 [01;31m[Kiam[m[K 1.2.1
+0 R parzival  1305  1301 96  80   0 -  2632 -      23:00 ?        00:13:13 [01;31m[Kiam[m[K 1.2.2
+0 S parzival  1325   663  0  80   0 -  7264 -      23:08 tty5     00:00:00 vim [01;31m[Kproc_hier[m[K.c
+0 S parzival  1572  1327  0  80   0 -  2632 -      23:14 pts/1    00:00:00 ./[01;31m[Kproc_hier[m[K
+0 R parzival  1573  1572 48  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.1
+0 R parzival  1574  1572 48  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.2
+0 R parzival  1575  1573 48  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.1.1
+0 R parzival  1576  1574 47  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.2.1
+0 R parzival  1577  1573 47  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.1.2
+0 R parzival  1578  1574 47  80   0 -  2632 -      23:14 pts/1    00:00:05 [01;31m[Kiam[m[K 1.2.2
+0 S parzival  1580  1334  0  80   0 -  4050 -      23:14 pts/2    00:00:00 grep --color=auto [01;31m[Kproc_hier[m[K\|[01;31m[Kiam[m[K
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ kill -KILL 1575 1577
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ kill -KILL 1575 1577ps -elf | grep "proc_hier\|iam"
+0 S parzival  1301     1  4  80   0 -  2632 -      23:00 ?        00:00:43 [01;31m[Kiam[m[K 1.2
+0 R parzival  1303  1301 91  80   0 -  2632 -      23:00 ?        00:14:27 [01;31m[Kiam[m[K 1.2.1
+0 R parzival  1305  1301 91  80   0 -  2632 -      23:00 ?        00:14:26 [01;31m[Kiam[m[K 1.2.2
+0 S parzival  1325   663  0  80   0 -  7264 -      23:08 tty5     00:00:00 vim [01;31m[Kproc_hier[m[K.c
+0 S parzival  1572  1327  0  80   0 -  2632 -      23:14 pts/1    00:00:00 ./[01;31m[Kproc_hier[m[K
+0 S parzival  1574  1572 28  80   0 -  2632 -      23:14 pts/1    00:00:39 [01;31m[Kiam[m[K 1.2
+0 R parzival  1576  1574 57  80   0 -  2632 -      23:14 pts/1    00:01:18 [01;31m[Kiam[m[K 1.2.1
+0 R parzival  1578  1574 57  80   0 -  2632 -      23:14 pts/1    00:01:17 [01;31m[Kiam[m[K 1.2.2
+0 S root      1581  1341  0  80   0 -  4686 -      23:14 pts/3    00:00:00 sudo gdb -p 1573 [01;31m[Kiam[m[K
+0 S root      1582  1581  0  80   0 - 16067 -      23:15 pts/3    00:00:00 gdb -p 1573 [01;31m[Kiam[m[K
+0 S root      1587  1348  0  80   0 -  4686 -      23:15 pts/4    00:00:00 sudo gdb -p 1574 [01;31m[Kiam[m[K
+0 S root      1588  1587  0  80   0 - 16067 -      23:15 pts/4    00:00:00 gdb -p 1574 [01;31m[Kiam[m[K
+0 S parzival  1594  1334  0  80   0 -  4050 -      23:16 pts/2    00:00:00 grep --color=auto [01;31m[Kproc_hier[m[K\|[01;31m[Kiam[m[K
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ ps -elf | grep "proc_hier\|iam"[11Pkill -KILL 1575 1577[K[K1576 156[K78
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ exit
+exit
+
+Script done on 2020-02-16 23:17:52-08:00 [COMMAND_EXIT_CODE="0"]

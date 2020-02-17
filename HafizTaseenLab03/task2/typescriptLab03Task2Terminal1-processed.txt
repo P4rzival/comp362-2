@@ -1,0 +1,56 @@
+Script started on 2020-02-16 23:13:26-08:00 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="117" LINES="30"]
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ cdicmake-build-debug/
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug$ cmake ..
+-- The C compiler identification is GNU 9.2.1
+-- The CXX compiler identification is GNU 9.2.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug$ make
+Scanning dependencies of target proc_hier
+[ 25%] Building C object CMakeFiles/proc_hier.dir/proc_hier.c.o
+[ 50%] Linking C executable bin/proc_hier
+[ 50%] Built target proc_hier
+Scanning dependencies of target iam
+[ 75%] Building C object CMakeFiles/iam.dir/iam.c.o
+[100%] Linking C executable bin/iam
+[100%] Built target iam
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug$ cd bin/
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin$ ./proc_hier
+I am the child 1.1, my pid is 1573, I will make my children before I morph
+I am the parent 1, my pid is 1572
+I am the child 1.2, my pid is 1574, I will make my children before I morph
+I am the child 1.1.1, my pid is 1575, I will now morph
+I am the child 1.2.1, my pid is 1576, I will now morph
+I am the parent 1.1, my pid is 1573
+Parent 1.1 will now morph
+I am the child 1.1.2, my pid is 1577, I will now morph
+I am the parent 1.2, my pid is 1574
+Parent 1.2 will now morph
+I am the child 1.2.2, my pid is 1578, I will now morph
+Process 1.2.1 pid is: 1576
+Process 1.1 pid is: 1573
+Process 1.1.1 pid is: 1575
+Process 1.1.2 pid is: 1577
+Process 1.2 pid is: 1574
+Process 1.2.2 pid is: 1578
+Process 1.1 is terminating
+-1 from wait() with errno = 10
+Process 1.2 is terminating
+Children 1.1, 1.2 have all been terminated; parent exiting
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin$ exit
+exit
+
+Script done on 2020-02-16 23:17:50-08:00 [COMMAND_EXIT_CODE="0"]

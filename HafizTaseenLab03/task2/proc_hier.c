@@ -20,14 +20,16 @@
 
 int main() {
 	pid_t pid;
+	pid_t pid11;
+	pid_t pid12;
 
 	// fork child process (1.1)
-	pid = fork();
+	pid11 = fork();
 
-	if (pid < 0) // error occurred
+	if (pid11 < 0) // error occurred
 		oops("Fork Failed!");
 
-	if (pid == 0) // child (1.1)
+	if (pid11 == 0) // child (1.1)
 	{
 		printf("I am the child 1.1, my pid is %d, I will make my children before I morph\n", getpid());
 
@@ -67,12 +69,12 @@ int main() {
 	}
 
 	// fork child process(1.2)
-	pid = fork();
+	pid12 = fork();
 
-	if (pid < 0) // error occurred
+	if (pid12 < 0) // error occurred
 		oops("Fork Failed!");
 
-	if (pid == 0) // child (1.2)
+	if (pid12 == 0) // child (1.2)
 	{
 		printf("I am the child 1.2, my pid is %d, I will make my children before I morph\n", getpid());
 
@@ -114,10 +116,17 @@ int main() {
 	// pid > 0 ==> must be parent 1
 	printf("I am the parent 1, my pid is %d\n", getpid());
 
-	/* parent 1 will wait for the child to complete */
+	/* parent 1 will wait for the children to complete */
+
 	if (waitpid(-1, NULL, 0) < 0)
 		printf("-1 from wait() with errno = %d\n", errno);
 
+	if (waitpid(pid11, NULL, 0) < 0)
+		printf("-1 from wait() with errno = %d\n", errno);
+
+	if (waitpid(pid12, NULL, 0) < 0)
+		printf("-1 from wait() with errno = %d\n", errno);
 	printf("Children 1.1, 1.2 have all been terminated; parent exiting\n");
+
 	exit(EXIT_SUCCESS);
 }
