@@ -1,3 +1,0 @@
-/mnt/e/Spring 2020/COMP 362 S20/HafizTaseenLab02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/e/Spring 2020/COMP 362 S20/HafizTaseenLab02/cmake-build-debug/CMakeFiles/sub.dir
-/mnt/e/Spring 2020/COMP 362 S20/HafizTaseenLab02/cmake-build-debug/CMakeFiles/edit_cache.dir

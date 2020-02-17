@@ -1,5 +1,0 @@
-#include <sys/wait.h>
-#include <stdlib.h>
-^add to code on slide 13 process creation
-lef col current pid, right parent pid
-Context switch is very important

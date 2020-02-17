@@ -1,4 +1,0 @@
-/home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/CMakeFiles/proc_hier.dir
-/home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/CMakeFiles/iam.dir
