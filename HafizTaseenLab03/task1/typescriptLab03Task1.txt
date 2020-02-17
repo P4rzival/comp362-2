@@ -1,0 +1,95 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 03 - Task 1
+ * Date: 02/17/2020
+ **/
+
+Script started on 2020-02-11 17:09:48-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="101" LINES="54"]
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1[00m$ exitcmake ..d cmake-build-debug/[2P./process_creation cd cmake-build-debug/[13Pmake ..d cmake-build-debug/[2P./process_creation cd cmake-build-debug/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ cd cmake-build-debug/[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [4Pexit
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmake .. 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K.
+-- The C compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taseen.hafiz264@csuci.edu/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ a[Kmake
+[35m[1mScanning dependencies of target memory_layout[0m
+[ 25%] [32mBuilding C object CMakeFiles/memory_layout.dir/memory_layout.c.o[0m
+[ 50%] [32m[1mLinking C executable memory_layout[0m
+[ 50%] Built target memory_layout
+[35m[1mScanning dependencies of target process_creation[0m
+[ 75%] [32mBuilding C object CMakeFiles/process_creation.dir/process_creation.c.o[0m
+[100%] [32m[1mLinking C executable process_creation[0m
+[100%] Built target process_creation
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ memory_l 
+ayout[K[K[K[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K./memory_layout 
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./m 
+emory_layout 
+   text	   data	    bss	    dec	    hex	filename
+   2018	    608	      8	   2634	    a4a	./memory_layout
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./memory_layout [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ ./memory_[5P[C[C[C[C[C[C[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [4Pmake
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./memory_layout [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./me[5@mory_[C[C[C[C[C[C[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./process_creation 
+I am the parent 11484
+Child Complete
+I am the child 11485
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ CMakeCache.txt	CMakeFiles  cmake_install.cmake  Makefile  memory_layout  process_creation
+./process_creation [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./process_creation [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./me[2@mory_layout[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ ./process[2P_creation[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./process_creation 
+I am the parent 11488
+Child Complete
+I am the child 11489
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ CMakeCache.txt	CMakeFiles  cmake_install.cmake  Makefile  memory_layout  process_creation
+process_ 
+creasda
+process_creasda: command not found
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ process_creasda[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ ./process_creation [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./me[2@mory_layout[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ ./memory_[5P[C[C[C[C[C[C[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [4Pmake
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmake .. 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pmake
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./memory_layout [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ size ./me[5@mory_[C[C[C[C[C[C[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ ./process[2P_creation[C[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ process_c[4Preasda[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ [K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./process_creation 
+I am the parent 11532
+Child Complete
+I am the child 11533
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ CMakeCache.txt	CMakeFiles  cmake_install.cmake  Makefile  memory_layout  process_creation
+
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab03/task1/cmake-build-debug[00m$ exit
+exit
+
+Script done on 2020-02-11 17:17:03-08:00 [COMMAND_EXIT_CODE="0"]

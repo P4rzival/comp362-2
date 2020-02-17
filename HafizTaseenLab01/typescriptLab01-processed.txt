@@ -1,0 +1,59 @@
+/**
+* Name: Taseen
+* Lab/task: Lab 01
+* Date: 02/03/2020
+**/
+
+Script started on 2020-02-03 19:40:05-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="175" LINES="43"]
+parzival@tuesdayB:/media/parzival/Documents/Spring 2020/comp362/HafizTaseenLab01$ cdclist/ -g -O0 -D_DEBUG -Wall *.c -o list
+parzival@tuesdayB:/media/parzival/Documents/Spring 2020/comp362/HafizTaseenLab01/list$ gcci-m64 -g -O0 -D_DEBUG -Wall *.c -o list
+parzival@tuesdayB:/media/parzival/Documents/Spring 2020/comp362/HafizTaseenLab01/list$ ./list64 -g -O0 -D_DEBUG -Wall *.c -o list
+1
+2
+3
+4
+5
+DATA ITEM 1: 1
+
+DATA ITEM 2: 2
+
+DATA ITEM 3: 3
+
+DATA ITEM 4: 4
+
+DATA ITEM 5: 5
+
+6
+7
+8
+9
+10
+DATA ITEM 1: 6
+
+DATA ITEM 2: 7
+
+DATA ITEM 3: 8
+
+DATA ITEM 4: 9
+
+DATA ITEM 5: 10
+
+11
+12
+13
+14
+15
+DATA ITEM 1: 11
+
+DATA ITEM 2: 12
+
+DATA ITEM 3: 13
+
+DATA ITEM 4: 14
+
+DATA ITEM 5: 15
+
+parzival@tuesdayB:/media/parzival/Documents/Spring 2020/comp362/HafizTaseenLab01/list$ exit
+exit
+
+Script done on 2020-02-03 19:40:39-08:00 [COMMAND_EXIT_CODE="0"]
