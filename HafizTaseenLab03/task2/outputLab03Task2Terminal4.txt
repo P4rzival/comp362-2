@@ -1,0 +1,31 @@
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ sudo gdb -p 1087 iam
+[sudo] password for parzival:
+GNU gdb (Ubuntu 8.3-0ubuntu1) 8.3
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+iam: No such file or directory.
+Attaching to process 1087
+Reading symbols from /home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin/iam...
+Reading symbols from /lib/x86_64-linux-gnu/libc.so.6...
+Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/libc-2.30.so...
+Reading symbols from /lib64/ld-linux-x86-64.so.2...
+Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/ld-2.30.so...
+main (argc=2, argv=0x7ffffab3a508) at /home/parzival/comp362/HafizTaseenLab03/task2/iam.c:22
+22	   while (i == 0) /* NOTE: this is an endless loop; use gdb to change the value of i and continue */
+(gdb) set var i=1
+(gdb) continue
+Continuing.
+[Inferior 1 (process 1087) exited normally]
+(gdb) q

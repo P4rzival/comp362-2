@@ -1,0 +1,21 @@
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin$ ./proc_hier
+I am the child 1.1, my pid is 1086, I will make my children before I morph
+I am the parent 1, my pid is 1085
+I am the child 1.2, my pid is 1087, I will make my children before I morph
+I am the child 1.1.1, my pid is 1088, I will now morph
+I am the parent 1.1, my pid is 1086
+Parent 1.1 will now morph
+I am the child 1.1.2, my pid is 1089, I will now morph
+I am the child 1.2.1, my pid is 1090, I will now morph
+Process 1.1 pid is: 1086
+Process 1.1.1 pid is: 1088
+Process 1.1.2 pid is: 1089
+I am the parent 1.2, my pid is 1087
+Parent 1.2 will now morph
+I am the child 1.2.2, my pid is 1091, I will now morph
+Process 1.2.1 pid is: 1090
+Process 1.2 pid is: 1087
+Process 1.2.2 pid is: 1091
+Process 1.1 is terminating
+Process 1.2 is terminating
+Children 1.1 and 1.2 have both been terminated; parent exiting

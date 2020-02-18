@@ -1,0 +1,44 @@
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ ps -elf | grep "proc_hier\|iam"
+0 S parzival   385   109  0  80   0 -  7263 -	   20:38 tty5	  00:00:00 vim proc_hier.c
+0 S parzival  1085   840  0  80   0 -  2632 -	   20:46 pts/0	  00:00:00 ./proc_hier
+0 R parzival  1086  1085 62  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.1
+0 R parzival  1087  1085 61  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.2
+0 R parzival  1088  1086 61  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.1.1
+0 R parzival  1089  1086 63  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.1.2
+0 R parzival  1090  1087 62  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.2.1
+0 R parzival  1091  1087 62  80   0 -  2632 -	   20:46 pts/0	  00:00:07 iam 1.2.2
+0 S parzival  1093   847  0  80   0 -  4050 -	   20:46 pts/1	  00:00:00 grep --color=auto proc_hier\|iam
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ ps -elf | grep "proc_hier\|iam"
+0 S parzival   385   109  0  80   0 -  7263 -	   20:38 tty5	  00:00:00 vim proc_hier.c
+0 S parzival  1085   840  0  80   0 -  2632 -	   20:46 pts/0	  00:00:00 ./proc_hier
+0 t parzival  1086  1085 41  80   0 -  2632 -	   20:46 pts/0	  00:00:43 iam 1.1
+0 t parzival  1087  1085 59  80   0 -  2632 -	   20:46 pts/0	  00:01:02 iam 1.2
+0 R parzival  1088  1086 71  80   0 -  2632 -	   20:46 pts/0	  00:01:15 iam 1.1.1
+0 R parzival  1089  1086 71  80   0 -  2632 -	   20:46 pts/0	  00:01:15 iam 1.1.2
+0 R parzival  1090  1087 71  80   0 -  2632 -	   20:46 pts/0	  00:01:15 iam 1.2.1
+0 R parzival  1091  1087 71  80   0 -  2632 -	   20:46 pts/0	  00:01:15 iam 1.2.2
+0 S root      1095   854  0  80   0 -  4686 -	   20:47 pts/2	  00:00:00 sudo gdb -p 1086 iam
+0 S root      1096  1095  1  80   0 - 16067 -	   20:47 pts/2	  00:00:00 gdb -p 1086 iam
+0 S root      1101   861  0  80   0 -  4686 -	   20:48 pts/3	  00:00:00 sudo gdb -p 1087 iam
+0 S root      1102  1101  3  80   0 - 16067 -	   20:48 pts/3	  00:00:00 gdb -p 1087 iam
+0 S parzival  1108   847  0  80   0 -  4050 -	   20:48 pts/1	  00:00:00 grep --color=auto proc_hier\|iam
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ kill -KILL 1088 1089
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ psl-elf | grep "proc_hier\|iam"
+0 S parzival   385   109  0  80   0 -  7263 -	   20:38 tty5	  00:00:00 vim proc_hier.c
+0 S parzival  1085   840  0  80   0 -  2632 -	   20:46 pts/0	  00:00:00 ./proc_hier
+0 S parzival  1087  1085 39  80   0 -  2632 -	   20:46 pts/0	  00:01:02 iam 1.2
+0 R parzival  1090  1087 79  80   0 -  2632 -	   20:46 pts/0	  00:02:06 iam 1.2.1
+0 R parzival  1091  1087 79  80   0 -  2632 -	   20:46 pts/0	  00:02:06 iam 1.2.2
+0 S root      1095   854  0  80   0 -  4686 -	   20:47 pts/2	  00:00:00 sudo gdb -p 1086 iam
+0 S root      1096  1095  0  80   0 - 16067 -	   20:47 pts/2	  00:00:00 gdb -p 1086 iam
+0 S root      1101   861  0  80   0 -  4686 -	   20:48 pts/3	  00:00:00 sudo gdb -p 1087 iam
+0 S root      1102  1101  0  80   0 - 16067 -	   20:48 pts/3	  00:00:00 gdb -p 1087 iam
+0 S parzival  1110   847  0  80   0 -  4050 -	   20:49 pts/1	  00:00:00 grep --color=auto proc_hier\|iam
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ kill -KILL 1090 1091
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ ps -elf | grep "proc_hier\|iam"
+0 S parzival   385   109  0  80   0 -  7263 -	   20:38 tty5	  00:00:00 vim proc_hier.c
+0 S root      1095   854  0  80   0 -  4686 -	   20:47 pts/2	  00:00:00 sudo gdb -p 1086 iam
+0 S root      1096  1095  0  80   0 - 16067 -	   20:47 pts/2	  00:00:00 gdb -p 1086 iam
+0 S root      1101   861  0  80   0 -  4686 -	   20:48 pts/3	  00:00:00 sudo gdb -p 1087 iam
+0 S root      1102  1101  0  80   0 - 16067 -	   20:48 pts/3	  00:00:00 gdb -p 1087 iam
+0 S parzival  1112   847  0  80   0 -  4050 -	   20:50 pts/1	  00:00:00 grep --color=auto proc_hier\|iam

@@ -1,5 +1,5 @@
-Script started on 2020-02-16 23:13:27-08:00 [TERM="xterm-256color" TTY="/dev/tty4" COLUMNS="117" LINES="30"]
-parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ sudo gdb -pi1574iiam iam iam
+Script started on 2020-02-17 20:45:54-08:00 [TERM="xterm-256color" TTY="/dev/tty2" COLUMNS="117" LINES="30"]
+parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ sudo gdb -p 1087iiam iam iam
 [sudo] password for parzival:
 GNU gdb (Ubuntu 8.3-0ubuntu1) 8.3
 Copyright (C) 2019 Free Software Foundation, Inc.
@@ -17,20 +17,20 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 iam: No such file or directory.
-Attaching to process 1574
+Attaching to process 1087
 Reading symbols from /home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin/iam...
 Reading symbols from /lib/x86_64-linux-gnu/libc.so.6...
 Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/libc-2.30.so...
 Reading symbols from /lib64/ld-linux-x86-64.so.2...
 Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/ld-2.30.so...
-main (argc=2, argv=0x7fffff7ecde8) at /home/parzival/comp362/HafizTaseenLab03/task2/iam.c:22
+main (argc=2, argv=0x7ffffab3a508) at /home/parzival/comp362/HafizTaseenLab03/task2/iam.c:22
 22	   while (i == 0) /* NOTE: this is an endless loop; use gdb to change the value of i and continue */
 (gdb) set var i=1
 (gdb) continue
 Continuing.
-[Inferior 1 (process 1574) exited normally]
+[Inferior 1 (process 1087) exited normally]
 (gdb) q
 parzival@KAREN:~/comp362/HafizTaseenLab03/task2$ exit
 exit
 
-Script done on 2020-02-16 23:18:03-08:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2020-02-17 20:50:32-08:00 [COMMAND_EXIT_CODE="0"]

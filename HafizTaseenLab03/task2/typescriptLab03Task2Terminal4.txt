@@ -1,5 +1,5 @@
-Script started on 2020-02-16 23:13:27-08:00 [TERM="xterm-256color" TTY="/dev/tty4" COLUMNS="117" LINES="30"]
-]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ sudo gdb -p <process id> iam[4Pamiam[K[3PiamLiam[1PiamKiam[1Piampiam iam1iam5iam7iam4iam iam
+Script started on 2020-02-17 20:45:54-08:00 [TERM="xterm-256color" TTY="/dev/tty2" COLUMNS="117" LINES="30"]
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ exit[Ksudo gdb -p <process id> iam[4Pamiam[K[1Piam1iam0iam8iam7iam iam
 [sudo] password for parzival: 
 [35;1mGNU gdb (Ubuntu 8.3-0ubuntu1) 8.3
 [mCopyright (C) 2019 Free Software Foundation, Inc.
@@ -17,20 +17,20 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 iam: No such file or directory.
-Attaching to process 1574
+Attaching to process 1087
 Reading symbols from [32m/home/parzival/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin/iam[m...
 Reading symbols from [32m/lib/x86_64-linux-gnu/libc.so.6[m...
 Reading symbols from [32m/usr/lib/debug//lib/x86_64-linux-gnu/libc-2.30.so[m...
 Reading symbols from [32m/lib64/ld-linux-x86-64.so.2[m...
 Reading symbols from [32m/usr/lib/debug//lib/x86_64-linux-gnu/ld-2.30.so[m...
-[33mmain[m ([36margc[m=2, [36margv[m=0x7fffff7ecde8) at [32m/home/parzival/comp362/HafizTaseenLab03/task2/iam.c[m:22
+[33mmain[m ([36margc[m=2, [36margv[m=0x7ffffab3a508) at [32m/home/parzival/comp362/HafizTaseenLab03/task2/iam.c[m:22
 22	   while (i == 0) /* NOTE: this is an endless loop; use gdb to change the value of i and continue */
 (gdb) set var i=1
 (gdb) continue
 Continuing.
-[Inferior 1 (process 1574) exited normally]
+[Inferior 1 (process 1087) exited normally]
 (gdb) q
 ]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ exit
 exit
 
-Script done on 2020-02-16 23:18:03-08:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2020-02-17 20:50:32-08:00 [COMMAND_EXIT_CODE="0"]

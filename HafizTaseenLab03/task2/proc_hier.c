@@ -20,6 +20,8 @@
 
 int main() {
 	pid_t pid;
+	
+    // Used so proc_hier only exits when its children terminate
 	pid_t pid11;
 	pid_t pid12;
 
@@ -121,12 +123,11 @@ int main() {
 	if (waitpid(-1, NULL, 0) < 0)
 		printf("-1 from wait() with errno = %d\n", errno);
 
-	if (waitpid(pid11, NULL, 0) < 0)
-		printf("-1 from wait() with errno = %d\n", errno);
+	waitpid(pid11, NULL, 0);
 
-	if (waitpid(pid12, NULL, 0) < 0)
-		printf("-1 from wait() with errno = %d\n", errno);
-	printf("Children 1.1, 1.2 have all been terminated; parent exiting\n");
+	waitpid(pid12, NULL, 0);
+	
+	printf("Children 1.1 and 1.2 have both been terminated; parent exiting\n");
 
 	exit(EXIT_SUCCESS);
 }

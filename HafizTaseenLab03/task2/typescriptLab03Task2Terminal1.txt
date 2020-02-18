@@ -1,5 +1,5 @@
-Script started on 2020-02-16 23:13:26-08:00 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="117" LINES="30"]
-]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ exitsudo gdb -p 1301 iamexit[K[Kcd cmake-build-debug/
+Script started on 2020-02-17 20:45:51-08:00 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="117" LINES="30"]
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2[00m$ cd cmake-build-debug/
 ]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2/cmake-build-debug[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2/cmake-build-debug[00m$ cmake ..
 -- The C compiler identification is GNU 9.2.1
 -- The CXX compiler identification is GNU 9.2.1
@@ -27,30 +27,29 @@ Script started on 2020-02-16 23:13:26-08:00 [TERM="xterm-256color" TTY="/dev/tty
 [ 75%] [32mBuilding C object CMakeFiles/iam.dir/iam.c.o[0m
 [100%] [32m[1mLinking C executable bin/iam[0m
 [100%] Built target iam
-]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2/cmake-build-debug[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2/cmake-build-debug[00m$ cd n[Kbin/
+]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2/cmake-build-debug[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2/cmake-build-debug[00m$ cd bin/
 ]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin[00m$ ./proc_hier 
-I am the child 1.1, my pid is 1573, I will make my children before I morph
-I am the parent 1, my pid is 1572
-I am the child 1.2, my pid is 1574, I will make my children before I morph
-I am the child 1.1.1, my pid is 1575, I will now morph
-I am the child 1.2.1, my pid is 1576, I will now morph
-I am the parent 1.1, my pid is 1573
+I am the child 1.1, my pid is 1086, I will make my children before I morph
+I am the parent 1, my pid is 1085
+I am the child 1.2, my pid is 1087, I will make my children before I morph
+I am the child 1.1.1, my pid is 1088, I will now morph
+I am the parent 1.1, my pid is 1086
 Parent 1.1 will now morph
-I am the child 1.1.2, my pid is 1577, I will now morph
-I am the parent 1.2, my pid is 1574
+I am the child 1.1.2, my pid is 1089, I will now morph
+I am the child 1.2.1, my pid is 1090, I will now morph
+Process 1.1 pid is: 1086
+Process 1.1.1 pid is: 1088
+Process 1.1.2 pid is: 1089
+I am the parent 1.2, my pid is 1087
 Parent 1.2 will now morph
-I am the child 1.2.2, my pid is 1578, I will now morph
-Process 1.2.1 pid is: 1576
-Process 1.1 pid is: 1573
-Process 1.1.1 pid is: 1575
-Process 1.1.2 pid is: 1577
-Process 1.2 pid is: 1574
-Process 1.2.2 pid is: 1578
+I am the child 1.2.2, my pid is 1091, I will now morph
+Process 1.2.1 pid is: 1090
+Process 1.2 pid is: 1087
+Process 1.2.2 pid is: 1091
 Process 1.1 is terminating
--1 from wait() with errno = 10
 Process 1.2 is terminating
-Children 1.1, 1.2 have all been terminated; parent exiting
+Children 1.1 and 1.2 have both been terminated; parent exiting
 ]0;parzival@KAREN: ~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin[01;32mparzival@KAREN[00m:[01;34m~/comp362/HafizTaseenLab03/task2/cmake-build-debug/bin[00m$ exit
 exit
 
-Script done on 2020-02-16 23:17:50-08:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2020-02-17 20:50:21-08:00 [COMMAND_EXIT_CODE="0"]
