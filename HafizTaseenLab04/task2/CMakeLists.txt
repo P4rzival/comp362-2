@@ -1,3 +1,7 @@
+ # Name: Taseen Hafiz
+ # Lab/task: Lab 04 - Task 2
+ # Date: 02/24/2020
+
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 project(avg_POSIX_uni VERSION 0.0.1 LANGUAGES C)
 
