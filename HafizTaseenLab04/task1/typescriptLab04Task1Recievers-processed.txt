@@ -1,0 +1,30 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 1
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-18 16:28:37-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="102" LINES="24"]
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04$ ls cm
+task1  typescriptLab04Task1Reciever.txt  week4Notes
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04$ cd task1/
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1$ cd cmake-build-debug/
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug$ cd bin/
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2		  shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  shm_POSIX_time_client
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./ipc_POSIX_receiver
+Received: "Hello receiver!" of type 1
+Sent back: "Hello receiver!"
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./npipe_receiver
+39 bytes received: Hello Sender, please respond if you can
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./shm_POSIX_time_client
+TIME NOW: Tue Feb 18 16:32:04 2020
+
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./shm_POSIX_time_client
+TIME NOW: Tue Feb 18 16:32:14 2020
+
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ exit
+exit
+
+Script done on 2020-02-18 16:53:34-08:00 [COMMAND_EXIT_CODE="0"]

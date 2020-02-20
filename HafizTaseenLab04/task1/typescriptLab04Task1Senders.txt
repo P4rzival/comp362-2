@@ -1,0 +1,87 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 1
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-18 16:25:06-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="102" LINES="24"]
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1[00m$ cd cmake-build-debug/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[00m$ cmake ..
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/taseen.hafiz264@csuci.edu/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[00m$ make
+[35m[1mScanning dependencies of target pipe1[0m
+[  5%] [32mBuilding C object CMakeFiles/pipe1.dir/pipes/pipe_1.c.o[0m
+[ 11%] [32m[1mLinking C executable bin/pipe1[0m
+[ 11%] Built target pipe1
+[35m[1mScanning dependencies of target npipe_receiver[0m
+[ 16%] [32mBuilding C object CMakeFiles/npipe_receiver.dir/npipe/npipe_receive.c.o[0m
+[ 22%] [32m[1mLinking C executable bin/npipe_receiver[0m
+[ 22%] Built target npipe_receiver
+[35m[1mScanning dependencies of target npipe_sender[0m
+[ 27%] [32mBuilding C object CMakeFiles/npipe_sender.dir/npipe/npipe_send.c.o[0m
+[ 33%] [32m[1mLinking C executable bin/npipe_sender[0m
+[ 33%] Built target npipe_sender
+[35m[1mScanning dependencies of target shm_POSIX_time_client[0m
+[ 38%] [32mBuilding C object CMakeFiles/shm_POSIX_time_client.dir/shm_POSIX/shm_POSIX_time_client.c.o[0m
+[ 44%] [32m[1mLinking C executable bin/shm_POSIX_time_client[0m
+[ 44%] Built target shm_POSIX_time_client
+[35m[1mScanning dependencies of target ipc_POSIX_sender[0m
+[ 50%] [32mBuilding C object CMakeFiles/ipc_POSIX_sender.dir/ipc_POSIX/ipc_POSIX_send.c.o[0m
+[ 55%] [32m[1mLinking C executable bin/ipc_POSIX_sender[0m
+[ 55%] Built target ipc_POSIX_sender
+[35m[1mScanning dependencies of target pipe[0m
+[ 61%] [32mBuilding C object CMakeFiles/pipe.dir/pipes/pipe.c.o[0m
+[ 66%] [32m[1mLinking C executable bin/pipe[0m
+[ 66%] Built target pipe
+[35m[1mScanning dependencies of target shm_POSIX_time_server[0m
+[ 72%] [32mBuilding C object CMakeFiles/shm_POSIX_time_server.dir/shm_POSIX/shm_POSIX_time_server.c.o[0m
+[ 77%] [32m[1mLinking C executable bin/shm_POSIX_time_server[0m
+[ 77%] Built target shm_POSIX_time_server
+[35m[1mScanning dependencies of target ipc_POSIX_receiver[0m
+[ 83%] [32mBuilding C object CMakeFiles/ipc_POSIX_receiver.dir/ipc_POSIX/ipc_POSIX_receive.c.o[0m
+[ 88%] [32m[1mLinking C executable bin/ipc_POSIX_receiver[0m
+[ 88%] Built target ipc_POSIX_receiver
+[35m[1mScanning dependencies of target pipe2[0m
+[ 94%] [32mBuilding C object CMakeFiles/pipe2.dir/pipes/pipe_2.c.o[0m
+[100%] [32m[1mLinking C executable bin/pipe2[0m
+[100%] Built target pipe2
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[00m$ ls
+[0m[01;34mbin[0m  CMakeCache.txt  [01;34mCMakeFiles[0m  cmake_install.cmake  compile_commands.json  Makefile
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[00m$ cd bin/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ls
+[0m[01;32mipc_POSIX_receiver[0m  [01;32mnpipe_receiver[0m  [01;32mpipe[0m   [01;32mpipe2[0m                  [01;32mshm_POSIX_time_server[0m
+[01;32mipc_POSIX_sender[0m    [01;32mnpipe_sender[0m    [01;32mpipe1[0m  [01;32mshm_POSIX_time_client[0m
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./ipc_POSIX_sender 
+Queue opened with:
+Maximum # of messages on queue:   10
+Maximum message size:             8192
+Sent: "Hello receiver!"
+Run the receiver.
+To continue, press Enter on the keybord...
+Received: "Hello receiver!" of type 1
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./npipe_sender 
+Enter line: Hello Sender, please respond id   f you cn an
+Enter line: q
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ shm[K[K[K./shm_POSIX_time_server 
+Time ticks: ............................................................
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ 
+[K]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ exit
+exit
+
+Script done on 2020-02-18 16:53:42-08:00 [COMMAND_EXIT_CODE="0"]

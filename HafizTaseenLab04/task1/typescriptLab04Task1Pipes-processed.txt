@@ -1,0 +1,73 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 1
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-18 16:36:32-08:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="102" LINES="24"]
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1$ cd cmake-build-debug/bin/
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2		  shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  shm_POSIX_time_client
+easeen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pip
+22 bytes read: Message for the child
+23 bytes read: Message for the parent
+e1seen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pip
+24 0
+This is PARENT speaking!
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe1
+24 0
+This is PARENT speaking!
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2
+usage: pipe_2 command_1 command_2
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ touch
+tpipeIn.txt
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ touch pipOut.txt
+ipeOut.txtiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ cat p
+e2spipeOut.txt4@"Hello"du@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pip
+Hello: No such file or directory
+pipeOut.txt: No such file or directory
+ipeIn.txtfiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ vim p
+"pipeIn.txt" 0L, 0C▽	1
+~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    0,0-1All+q436f+q6b75+q6b64+q6b72+q6b6c+q2332+q2334+q2569+q2a37+q6b31  1
+"pipeIn.txt" 1L, 12C-written --0,1AllH1,2e3l4l5o67U8s9e10r1!21,11All:x				      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    ~													  ~													~												      ~ 												    0,0-1All
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2epipeOut.txt  pipeOut.txt
+pipeOut.txt: No such file or directory
+pipeOut.txt: No such file or directory
+lsscat.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 pipeOut.txt  pipeOut.txt
+ipc_POSIX_receiver
+ipc_POSIX_sender
+npipe_receiver
+npipe_sender
+pipe
+pipe1
+pipe2
+pipeIn.txt
+pipeOut.txt
+shm_POSIX_time_client
+shm_POSIX_time_server
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 ls lst
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 catlls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 cat catt
+^C
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 cat lst
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 "hello\n"cat
+hello\n: No such file or directory
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe2 "hello\n" cat
+./npipe_
+ls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ ./pipe
+22 bytes read: Message for the child
+23 bytes read: Message for the parent
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin$ exit
+exit
+
+Script done on 2020-02-18 16:53:30-08:00 [COMMAND_EXIT_CODE="0"]

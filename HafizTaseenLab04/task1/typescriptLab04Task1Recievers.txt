@@ -1,0 +1,31 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 1
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-18 16:28:37-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="102" LINES="24"]
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04[00m$ ls[Kcd cm[K[K[K[K[Kcd c[K[K[K[Kls
+[0m[01;34mtask1[0m  typescriptLab04Task1Reciever.txt  week4Notes
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04[00m$ cd task1/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1[00m$ cd cmake-build-debug/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug[00m$ cd bin/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ls
+[0m[01;32mipc_POSIX_receiver[0m  [01;32mnpipe_receiver[0m  [01;32mpipe[0m   [01;32mpipe2[0m                  [01;32mshm_POSIX_time_server[0m
+[01;32mipc_POSIX_sender[0m    [01;32mnpipe_sender[0m    [01;32mpipe1[0m  [01;32mshm_POSIX_time_client[0m
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./ipc_POSIX_receiver 
+Received: "Hello receiver!" of type 1
+Sent back: "Hello receiver!"
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./npipe_receiver 
+39 bytes received: Hello Sender, please respond if you can
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./ \[K[Kshm_POSIX_time_r[Kclient 
+TIME NOW: Tue Feb 18 16:32:04 2020
+
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./shm_POSIX_time_client 
+TIME NOW: Tue Feb 18 16:32:14 2020
+
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ 
+[K]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ exit
+exit
+
+Script done on 2020-02-18 16:53:34-08:00 [COMMAND_EXIT_CODE="0"]

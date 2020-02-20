@@ -1,0 +1,104 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 1
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-18 16:36:32-08:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="102" LINES="24"]
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1[00m$ cd cmake-build-debug/bin/
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ls
+[0m[01;32mipc_POSIX_receiver[0m  [01;32mnpipe_receiver[0m  [01;32mpipe[0m   [01;32mpipe2[0m                  [01;32mshm_POSIX_time_server[0m
+[01;32mipc_POSIX_sender[0m    [01;32mnpipe_sender[0m    [01;32mpipe1[0m  [01;32mshm_POSIX_time_client[0m
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pip 
+e
+22 bytes read: Message for the child
+23 bytes read: Message for the parent
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pip 
+e1
+24 0
+This is PARENT speaking!
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe1
+24 0
+This is PARENT speaking!
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe1[K2
+usage: pipe_2 command_1 command_2
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ tou[K[K[Ktouch 
+ 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Ktouch 
+ pipeIn.txt
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ touch pipeIn.txt[C[1P.txt[1P.txtO.txtu.txtt.txt
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ cat p 
+ipeOut.txt 
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pip 
+e2 pipeOut.txt  "Hello"
+Hello: No such file or directory
+pipeOut.txt: No such file or directory
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ vim[K[Kim p 
+ipei[KIn.txt 
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"pipeIn.txt" 0L, 0C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[38;5;130m  1 [m
+[94m~                                                                                                     [3;1H~                                                                                                     [4;1H~                                                                                                     [5;1H~                                                                                                     [6;1H~                                                                                                     [7;1H~                                                                                                     [8;1H~                                                                                                     [9;1H~                                                                                                     [10;1H~                                                                                                     [11;1H~                                                                                                     [12;1H~                                                                                                     [13;1H~                                                                                                     [14;1H~                                                                                                     [15;1H~                                                                                                     [16;1H~                                                                                                     [17;1H~                                                                                                     [18;1H~                                                                                                     [19;1H~                                                                                                     [20;1H~                                                                                                     [21;1H~                                                                                                     [22;1H~                                                                                                     [23;1H~                                                                                                     [m[24;85H0,0-1[9CAll[1;5H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[27m[23m[29m[m[H[2J[?25l[1;1H[93m  1 [m
+[94m~                                                                                                     [3;1H~                                                                                                     [4;1H~                                                                                                     [5;1H~                                                                                                     [6;1H~                                                                                                     [7;1H~                                                                                                     [8;1H~                                                                                                     [9;1H~                                                                                                     [10;1H~                                                                                                     [11;1H~                                                                                                     [12;1H~                                                                                                     [13;1H~                                                                                                     [14;1H~                                                                                                     [15;1H~                                                                                                     [16;1H~                                                                                                     [17;1H~                                                                                                     [18;1H~                                                                                                     [19;1H~                                                                                                     [20;1H~                                                                                                     [21;1H~                                                                                                     [22;1H~                                                                                                     [23;1H~                                                                                                     [m[24;85H0,0-1[9CAll
+"pipeIn.txt" 0L, 0C[1;5H[?25h[?25l[24;1H[1m-- INSERT --[m[24;14H[K[24;85H0,1[11CAll[1;5H[?25h[?25lH[24;85H1,2[1;6H[?25h[?25le[24;87H3[1;7H[?25h[?25ll[24;87H4[1;8H[?25h[?25ll[24;87H5[1;9H[?25h[?25lo[24;87H6[1;10H[?25h[?25l[24;87H7[1;11H[?25h[?25lU[24;87H8[1;12H[?25h[?25ls[24;87H9[1;13H[?25h[?25le[24;87H10[1;14H[?25h[?25lr[24;88H1[1;15H[?25h[?25l![24;88H2[1;16H[?25h[24;1H[K[1;15H[?25l[24;85H1,11[10CAll[1;15H[?25h[?25l[24;85H[K[24;1H:[?2004h[?25hx[?25l[?25h
+[?25l[?2004l"pipeIn.txt" 1L, 12C written
+[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t
+
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ vim pipeIn.txt [A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 pipeOut.txt  "Hello"[K[K[K[K[K[K[KP[KpipeOut.txt 
+pipeOut.txt: No such file or directory
+pipeOut.txt: No such file or directory
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ 
+[K]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ 
+[K]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 pipeOut.txt  pipeOut.txt [K[K[K
+[C[Kls cat
+ipc_POSIX_receiver
+ipc_POSIX_sender
+npipe_receiver
+npipe_sender
+pipe
+pipe1
+pipe2
+pipeIn.txt
+pipeOut.txt
+shm_POSIX_time_client
+shm_POSIX_time_server
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 ls cat[K[K[Kls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 ls ls[K[K[K[K[Kcat ls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 cat ls[K[Kxcat[K[K[K[Kcat
+^C
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 cat cat[K[K[Kls
+ipc_POSIX_receiver  npipe_receiver  pipe   pipe2       pipeOut.txt	      shm_POSIX_time_server
+ipc_POSIX_sender    npipe_sender    pipe1  pipeIn.txt  shm_POSIX_time_client
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 cat ls[K[K[K[K[K[K"hello"\"s"[1P"n"[C cat
+hello\n: No such file or directory
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./pipe2 "hello\n" cat
+[C[7Pcat lscat[1Plscat[1Pls
+[C[1Pls[C[C[Ccat[1Plscat
+[CpipeOut.txt  pipeOut.txt 
+[Cls cat[K
+[CpipeOut.txt  pipeOut.txt 
+[Cls cat[K[1Plscat
+[CpipeOut.txt  pipeOut.txt 
+[Cls cat[K[1Pls
+[C[1@cat[C[C[Ccat[1Pls
+[C"hello\n" cat[A
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ [K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp[K./npipe_
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[Kls
+[0m[01;32mipc_POSIX_receiver[0m  [01;32mnpipe_receiver[0m  [01;32mpipe[0m   [01;32mpipe2[0m       pipeOut.txt            [01;32mshm_POSIX_time_server[0m
+[01;32mipc_POSIX_sender[0m    [01;32mnpipe_sender[0m    [01;32mpipe1[0m  pipeIn.txt  [01;32mshm_POSIX_time_client[0m
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ ./ [Kpipe
+22 bytes read: Message for the child
+23 bytes read: Message for the parent
+]0;taseen.hafiz264@csuci.edu@124207: ~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[01;32mtaseen.hafiz264@csuci.edu@124207[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task1/cmake-build-debug/bin[00m$ exit
+exit
+
+Script done on 2020-02-18 16:53:30-08:00 [COMMAND_EXIT_CODE="0"]
