@@ -14,16 +14,16 @@
 #include <mqueue.h>
 #include <stdbool.h>
 
-#define SERVER_NAME "/SERVER" // message queue name must start with '/'
-
-#define MAX_MSG_SIZE 1024
-#define TYPE 1
-
 typedef struct messg {
-    char sender_name[16];
-    double averageValue;
-    long numberOfReports;
+bool stable;
+int nodeId;
+float temperature;
 } MESSG;
+
+typedef struct temperature {
+    mqd_t msqid;
+    float previousTemperature;
+} TEMPERATURE;
 
 #define oops(ermsg,erno) {perror(ermsg); exit(erno); }
 
