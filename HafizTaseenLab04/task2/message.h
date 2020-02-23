@@ -14,6 +14,11 @@
 #include <mqueue.h>
 #include <stdbool.h>
 
+#define SERVER_NAME "/MONITOR" 
+
+#define MAX_MSG_SIZE 1024
+#define TYPE 1
+
 typedef struct messg {
 bool stable;
 int nodeId;
