@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	mqd_t mon_msqid;				// Store monitor's queue id
 	mqd_t nod_msqid[atoi(argv[2])];	// Store nodes' queue id
 	MESSG msg_rcvd, msg_send;
+	pid_t pid;
 
 	// String to store the name of the node in use
 	char nodeStr[sizeof(NODE_NAME_PREFIX)+1];
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
 	for(int i = 0; i < atoi(argv[2]); i++)
 	{   
 		sprintf(nodeStr, "%s%s%d","/", NODE_NAME_PREFIX, i); 
-		
+
 		if ((nod_msqid[i] = mq_open(nodStr, O_RDWR | O_CREAT, S_IWUSR | S_IRUSR, &attr)) < 0)
 		{   
 			oops("SRV: Error opening a server queue.", errno);
@@ -73,7 +74,31 @@ int main(int argc, char *argv[])
 	} 
 
 	// Creates nodes as child processes
-	
+	for(int i = 0; i < atoi(argv[2]); i++)
+	{
+		sprintf(nodeStr, "%s%s%d","/", NODE_NAME_PREFIX, i);
+		pid = fork();
 
+		if (pid < 0) // error occurred
+		{
+			oops("Fork Failed!");
+		}
+
+		if (pid == 0) // node_i child
+		{
+			if (execlp("./node", nodeStr, i, argv[i + 3], NULL) < 0) 
+			{
+				oops("Execlp Failed!");
+			}
+			printf("\n%s process created\n", nodeStr);
+			break;	// Since it is the child, it will break for loop to prevent making children
+		}		
+	}
+
+	// Reads node reports and processes data
+	while(true)
+	{
+
+	}
 	exit(EXIT_SUCCESS);
 }
