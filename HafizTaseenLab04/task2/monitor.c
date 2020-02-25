@@ -8,24 +8,28 @@
 
 int main(int argc, char *argv[])
 {
-	//TEMPERATURE nodeData[argv[2]];  //Initializes array of node data specified from 3rd argument
-	//-----------Testing---------------
-	char temp[sizeof(MONITOR_QUEUE)+1];
-	for(int i=0; i< atoi(argv[2]); i++)
-	{
-		sprintf(temp, "%s%s%s","/", NODE_NAME_PREFIX, argv[2]);
-		printf("\n%s\n", temp);
-	}
-	//------------------------------------
+//	//-----------Testing---------------
+//	char temp[sizeof(MONITOR_QUEUE)+1];
+//	for(int i=0; i< atoi(argv[2]); i++)
+//	{
+//		sprintf(temp, "%s%s%s","/", NODE_NAME_PREFIX, argv[2]);
+//		printf("\n%s\n", temp);
+//	}
+//	//------------------------------------
 
 	// Variables needed for queues
 	mqd_t mon_msqid;				// Store monitor's queue id
-	mqd_t nod_msqid[atoi(argv[2])];	// Store nodes' queue id
+	TEMPERATURE nodeData[atoi(argv[2])];  //Initializes array of node data specified from 3rd argument
 	MESSG msg_rcvd, msg_send;
 	pid_t pid;
+	unsigned int type;
+	bool loopFlag = true;
+	float new_integrated_temp;
+	float previuous_integrated_temp;
+	float sum_of_client_temps;
 
 	// String to store the name of the node in use
-	char nodeStr[sizeof(NODE_NAME_PREFIX)+1];
+	char nodeStr[sizeof(NODE_NAME_PREFIX)+2];
 
 
 
@@ -65,12 +69,12 @@ int main(int argc, char *argv[])
 	{   
 		sprintf(nodeStr, "%s%s%d","/", NODE_NAME_PREFIX, i); 
 
-		if ((nod_msqid[i] = mq_open(nodStr, O_RDWR | O_CREAT, S_IWUSR | S_IRUSR, &attr)) < 0)
+		if ((nodeData[i].msqid = mq_open(nodeStr, O_RDWR | O_CREAT, S_IWUSR | S_IRUSR, &attr)) < 0)
 		{   
 			oops("SRV: Error opening a server queue.", errno);
 		}   
 
-		printf("SRV: Message queue %s created.\n", nodStr+1);
+		printf("SRV: Message queue %s created.\n", nodeStr+1);
 	} 
 
 	// Creates nodes as child processes
@@ -81,14 +85,14 @@ int main(int argc, char *argv[])
 
 		if (pid < 0) // error occurred
 		{
-			oops("Fork Failed!");
+			//oops("Fork Failed!");
 		}
 
 		if (pid == 0) // node_i child
 		{
 			if (execlp("./node", nodeStr, i, argv[i + 3], NULL) < 0) 
 			{
-				oops("Execlp Failed!");
+				//	oops("Execlp Failed!");
 			}
 			printf("\n%s process created\n", nodeStr);
 			break;	// Since it is the child, it will break for loop to prevent making children
@@ -96,9 +100,13 @@ int main(int argc, char *argv[])
 	}
 
 	// Reads node reports and processes data
-	while(true)
+	while(loopFlag)
 	{
-
+		if (mq_receive(mon_msqid, (char*) &msg_rcvd, MAX_MSG_SIZE, &type) >= 0)
+		{
+			loopFlag = false;	
+		}
+		loopFlag = false;	
 	}
 	exit(EXIT_SUCCESS);
 }
