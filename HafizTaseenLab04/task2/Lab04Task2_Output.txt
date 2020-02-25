@@ -1,0 +1,29 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 2
+ * Date: 02/24/2020
+ **/
+
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin$ ./monitor 200 4 25 50 75 100
+
+SRV: Message queue MONITOR removed.
+
+SRV: Message queue NODE_0 removed.
+
+SRV: Message queue NODE_1 removed.
+
+SRV: Message queue NODE_2 removed.
+
+SRV: Message queue NODE_3 removed.
+SRV: Message queue /MONITOR created.
+SRV: Message queue NODE_0 created.
+SRV: Message queue NODE_1 created.
+SRV: Message queue NODE_2 created.
+SRV: Message queue NODE_3 created.
+
+/NODE_1 process created
+
+/NODE_2 process created
+
+/NODE_3 process created
+^C

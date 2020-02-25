@@ -1,0 +1,58 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 2
+ * Date: 02/24/2020
+ **/
+
+Script started on 2020-02-24 23:49:30-08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="189" LINES="47"]
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2[00m$ cd cmake-build-debug/
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[00m$ cmake ..
+-- The C compiler identification is GNU 9.2.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/parzival/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[00m$ make
+[35m[1mScanning dependencies of target monitor[0m
+[ 25%] [32mBuilding C object CMakeFiles/monitor.dir/monitor.c.o[0m
+[ 50%] [32m[1mLinking C executable bin/monitor[0m
+[ 50%] Built target monitor
+[35m[1mScanning dependencies of target node[0m
+[ 75%] [32mBuilding C object CMakeFiles/node.dir/node.c.o[0m
+[100%] [32m[1mLinking C executable bin/node[0m
+[100%] Built target node
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug[00m$ cd bin/
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[00m$ ls
+[0m[01;32mmonitor[0m  [01;32mnode[0m
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[00m$ ./monitor 200 4 25 50 75 100
+
+SRV: Message queue MONITOR removed.
+
+SRV: Message queue NODE_0 removed.
+
+SRV: Message queue NODE_1 removed.
+
+SRV: Message queue NODE_2 removed.
+
+SRV: Message queue NODE_3 removed.
+SRV: Message queue /MONITOR created.
+SRV: Message queue NODE_0 created.
+SRV: Message queue NODE_1 created.
+SRV: Message queue NODE_2 created.
+SRV: Message queue NODE_3 created.
+
+/NODE_1 process created
+
+/NODE_2 process created
+
+/NODE_3 process created
+^C
+]0;parzival@lubuntu: ~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[01;32mparzival@lubuntu[00m:[01;34m~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin[00m$ exit
+exit
+
+Script done on 2020-02-24 23:49:57-08:00 [COMMAND_EXIT_CODE="130"]

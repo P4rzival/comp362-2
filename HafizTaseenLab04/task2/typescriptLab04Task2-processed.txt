@@ -1,0 +1,58 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 04 - Task 2
+ * Date: 02/24/2020
+ **/
+ 
+Script started on 2020-02-24 23:49:30-08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="189" LINES="47"]
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2$ cd cmake-build-debug/
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug$ cmake ..
+-- The C compiler identification is GNU 9.2.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/parzival/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug$ make
+Scanning dependencies of target monitor
+[ 25%] Building C object CMakeFiles/monitor.dir/monitor.c.o
+[ 50%] Linking C executable bin/monitor
+[ 50%] Built target monitor
+Scanning dependencies of target node
+[ 75%] Building C object CMakeFiles/node.dir/node.c.o
+[100%] Linking C executable bin/node
+[100%] Built target node
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug$ cd bin/
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin$ ls
+monitor  node
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin$ ./monitor 200 4 25 50 75 100
+
+SRV: Message queue MONITOR removed.
+
+SRV: Message queue NODE_0 removed.
+
+SRV: Message queue NODE_1 removed.
+
+SRV: Message queue NODE_2 removed.
+
+SRV: Message queue NODE_3 removed.
+SRV: Message queue /MONITOR created.
+SRV: Message queue NODE_0 created.
+SRV: Message queue NODE_1 created.
+SRV: Message queue NODE_2 created.
+SRV: Message queue NODE_3 created.
+
+/NODE_1 process created
+
+/NODE_2 process created
+
+/NODE_3 process created
+^C
+parzival@lubuntu:~/Desktop/comp362/HafizTaseenLab04/task2/cmake-build-debug/bin$ exit
+exit
+
+Script done on 2020-02-24 23:49:57-08:00 [COMMAND_EXIT_CODE="130"]
