@@ -13,6 +13,9 @@
 #include <errno.h>
 #include <mqueue.h>
 #include <stdbool.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 #define MONITOR_QUEUE "/MONITOR"
 #define NODE_NAME_PREFIX "NODE_"
@@ -21,14 +24,14 @@
 #define TYPE 1
 
 typedef struct messg {
-bool stable;
-int nodeId;
-float temperature;
+	bool stable;
+	int nodeId;
+	float temperature;
 } MESSG;
 
 typedef struct temperature {
-    mqd_t msqid;
-    float previousTemperature;
+	mqd_t msqid;
+	float previousTemperature;
 } TEMPERATURE;
 
 #define oops(ermsg,erno) {perror(ermsg); exit(erno); }
