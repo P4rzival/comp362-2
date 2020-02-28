@@ -66,7 +66,7 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 	if (scanf("%d %d %d", m, k, n) == 0)
 		oops("Cannot read matrix sizes.\n", -2);
 
-	// TODO: implement
+	// TODO: implement DONE
 	// Allocating all matrices 
 
 	// Allocating matrix a
@@ -90,11 +90,24 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 		(*c)[p] = (int*) malloc(*n*sizeof(int));
 	}
 
+	// Loading all matrices
+
+	// Loading matrix a
+	loadMatrix(a, *m, *k);	
+
+	// Loading matrix b
+	loadMatrix(b, *k, *n);	
+
+	// Loading matrix c
+	loadMatrix(c, *m, *n);	
+
 }
 
 void loadMatrix(int ***matrix, int m, int n)
 {
 	// TODO: implement
+	// Read line by line until full matrix is loaded
+	
 }
 
 void freeMatrix(int **matrix, int m)
