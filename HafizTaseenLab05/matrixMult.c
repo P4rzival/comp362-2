@@ -93,7 +93,7 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 	// Loading all matrices
 
 	// Loading matrix a
-	loadMatrix(a, *m, *k);	
+	loadMatrix(a, *m, *k);	// Test if *a and &a works
 
 	// Loading matrix b
 	loadMatrix(b, *k, *n);	
@@ -113,9 +113,15 @@ void loadMatrix(int ***matrix, int m, int n)
 	}		
 }
 
-void freeMatrix(int **matrix, int m)
+void freeMatrix(int **matrix, int m)	// Execute with freeMatrix(*a, *m);
 {
 	// TODO: implement
+	// Free in reverse order it was malloc'd
+		for (int i = 0; i < m; i++)
+	{
+		free(&((*matrix)[i]));
+	}
+	free(&(*matrix));
 }
 
 // Creates threads allocate space before starting thread, free memory at the end
