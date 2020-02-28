@@ -3,7 +3,8 @@
  * Lab/task: Lab 05
  * Date: 03/02/2020
  **/
-
+// &((*a)[i][j])
+// errno tells you why malloc failed (fails if it returns NULL)
 #include "matrixMult.h"
 
 int main(int argc, char *argv[])
@@ -66,10 +67,29 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 		oops("Cannot read matrix sizes.\n", -2);
 
 	// TODO: implement
-	// Allocating all variables
+	// Allocating all matrices 
 
-	// First store m, k, n
-	
+	// Allocating matrix a
+	*a  = (int **)malloc(*m*sizeof(int*));
+	for (int p = 0; p < *m; p++)
+	{
+		(*a)[p] = (int*) malloc(*k*sizeof(int));
+	}
+
+	// Allocating matrix b
+	*b  = (int **)malloc(*k*sizeof(int*));
+	for (int p = 0; p < *k; p++)
+	{
+		(*b)[p] = (int*) malloc(*n*sizeof(int));
+	}
+
+	// Allocating matrix c
+	*c  = (int **)malloc(*m*sizeof(int*));
+	for (int p = 0; p < *m; p++)
+	{
+		(*c)[p] = (int*) malloc(*n*sizeof(int));
+	}
+
 }
 
 void loadMatrix(int ***matrix, int m, int n)
@@ -82,6 +102,7 @@ void freeMatrix(int **matrix, int m)
 	// TODO: implement
 }
 
+// Creates threads allocate space before starting thread, free memory at the end
 pthread_t **multiply(int **a, int **b, int **c, int m, int k, int n)
 {
 	pthread_t **tids = alloc_tids(m, n);
