@@ -71,23 +71,23 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 
 	// Allocating matrix a
 	*a  = (int **)malloc(*m*sizeof(int*));
-	for (int p = 0; p < *m; p++)
+	for (int i = 0; i < *m; i++)
 	{
-		(*a)[p] = (int*) malloc(*k*sizeof(int));
+		(*a)[i] = (int*) malloc(*k*sizeof(int));
 	}
 
 	// Allocating matrix b
 	*b  = (int **)malloc(*k*sizeof(int*));
-	for (int p = 0; p < *k; p++)
+	for (int i = 0; i < *k; i++)
 	{
-		(*b)[p] = (int*) malloc(*n*sizeof(int));
+		(*b)[i] = (int*) malloc(*n*sizeof(int));
 	}
 
 	// Allocating matrix c
 	*c  = (int **)malloc(*m*sizeof(int*));
-	for (int p = 0; p < *m; p++)
+	for (int i = 0; i < *m; i++)
 	{
-		(*c)[p] = (int*) malloc(*n*sizeof(int));
+		(*c)[i] = (int*) malloc(*n*sizeof(int));
 	}
 
 	// Loading all matrices
@@ -98,16 +98,19 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 	// Loading matrix b
 	loadMatrix(b, *k, *n);	
 
-	// Loading matrix c
-	loadMatrix(c, *m, *n);	
-
 }
 
 void loadMatrix(int ***matrix, int m, int n)
 {
-	// TODO: implement
-	// Read line by line until full matrix is loaded
-	
+	// TODO: implement DONE
+	// Read number by number until full matrix is loaded, size is defined as mxn by parameters
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			scanf("%d", &((*matrix)[i][j]));
+		}
+	}		
 }
 
 void freeMatrix(int **matrix, int m)
