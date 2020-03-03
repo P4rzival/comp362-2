@@ -154,7 +154,13 @@ pthread_t **alloc_tids(int m, int n)
 
 void free_tids(pthread_t **tids, int m)
 {
-	// TODO: implement
+	// TODO: implement DONE
+	// Free in reverse order it was malloc'd
+	for (int i = 0; i < m; i++)
+	{
+		free((tids)[i]);
+	}
+	free(tids);
 }
 
 void join(pthread_t **tids, int m, int n)
