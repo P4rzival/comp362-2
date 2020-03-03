@@ -142,11 +142,27 @@ pthread_t **alloc_tids(int m, int n)
 	// TODO: implement DONE
 
 	// Allocating threads, one thread per element in matrix C
-	tids  = (pthread_t**) malloc(m*sizeof(pthread_t**));
+	tids  = (pthread_t**) malloc(m*sizeof(pthread_t*));
+	if(tids != NULL)
+	{
+		puts("\nyes tids");
+	}
+	else
+	{
+		puts("\nno tids");
+	}
 
 	for (int i = 0; i < m; i++)
 	{
-		tids[i] = (pthread_t*) malloc(n*sizeof(pthread_t*));
+		tids[i] = (pthread_t*) malloc(n*sizeof(pthread_t));
+		if(tids[i] != NULL)
+		{
+			printf("\nyes tids[%d]", i);
+		}
+		else
+		{
+			printf("\nno tids[%d]", i);
+		}
 	}
 
 	return tids;
