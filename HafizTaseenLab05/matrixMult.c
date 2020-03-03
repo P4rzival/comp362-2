@@ -21,7 +21,8 @@ int main(int argc, char *argv[])
 	// the real magic happens in there
 
 	// TODO: implement
-
+	multiply(a1, b1, c1, m1, k1, n1);
+	multiply(a2, b2, c2, m2, k2, n2);
 	// display results of matrix multiplication
 
 	printf("\nMATRIX A1\n");
@@ -70,21 +71,21 @@ void allocateAndLoadMatrices(int ***a, int ***b, int ***c, int *m, int *k, int *
 	// Allocating all matrices 
 
 	// Allocating matrix a
-	*a  = (int **)malloc(*m*sizeof(int*));
+	*a  = (int **) malloc(*m*sizeof(int*));
 	for (int i = 0; i < *m; i++)
 	{
 		(*a)[i] = (int*) malloc(*k*sizeof(int));
 	}
 
 	// Allocating matrix b
-	*b  = (int **)malloc(*k*sizeof(int*));
+	*b  = (int **) malloc(*k*sizeof(int*));
 	for (int i = 0; i < *k; i++)
 	{
 		(*b)[i] = (int*) malloc(*n*sizeof(int));
 	}
 
 	// Allocating matrix c
-	*c  = (int **)malloc(*m*sizeof(int*));
+	*c  = (int **) malloc(*m*sizeof(int*));
 	for (int i = 0; i < *m; i++)
 	{
 		(*c)[i] = (int*) malloc(*n*sizeof(int));
@@ -138,7 +139,15 @@ pthread_t **alloc_tids(int m, int n)
 {
 	pthread_t **tids;
 
-	// TODO: implement
+	// TODO: implement DONE
+
+	// Allocating threads, one thread per element in matrix C
+	tids  = (pthread_t**) malloc(m*sizeof(pthread_t**));
+
+	for (int i = 0; i < m; i++)
+	{
+		tids[i] = (pthread_t*) malloc(n*sizeof(pthread_t*));
+	}
 
 	return tids;
 }
