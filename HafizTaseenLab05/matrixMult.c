@@ -117,11 +117,11 @@ void freeMatrix(int **matrix, int m)	// Execute with freeMatrix(*a, *m);
 {
 	// TODO: implement DONE
 	// Free in reverse order it was malloc'd
-		for (int i = 0; i < m; i++)
+	for (int i = 0; i < m; i++)
 	{
-		free(&((*matrix)[i]));
+		free((matrix)[i]);
 	}
-	free(&(*matrix));
+	free(matrix);
 }
 
 // Creates threads allocate space before starting thread, free memory at the end
@@ -156,4 +156,12 @@ void join(pthread_t **tids, int m, int n)
 void displayMatrix(int **matrix, int m, int n)
 {
 	// TODO: implement
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			printf("%d	", (matrix)[i][j]);
+		}
+		puts("\n");
+	}	
 }
