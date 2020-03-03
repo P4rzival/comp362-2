@@ -133,8 +133,6 @@ pthread_t **multiply(int **a, int **b, int **c, int m, int k, int n)
 	// TODO: implement	DONE
 	// Package parameters into a MATRIX_CELL object
 	MATRIX_CELL *cell = (MATRIX_CELL *) malloc(sizeof(MATRIX_CELL));
-	cell->i = m;
-	cell->j = n;
 	cell->k = k;
 	cell->a = a;
 	cell->b = b;
@@ -143,8 +141,10 @@ pthread_t **multiply(int **a, int **b, int **c, int m, int k, int n)
 	// Making threads
 	for (int i = 0; i < m; i++)
 	{
+		cell->i = i;
 		for (int j = 0; j < n; j++)
 		{
+			cell->j = j;
 			pthread_create(&(tids[i][j]), NULL, matrixThread, (void*) cell);	// I think I am passing cell incorrectly since in matrixThread, there is nothing
 		}
 	}
