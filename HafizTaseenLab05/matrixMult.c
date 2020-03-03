@@ -52,10 +52,10 @@ void *matrixThread(void *param)
 {
 	// map the parameter onto the structure
 	MATRIX_CELL *cell = (MATRIX_CELL *)param;
-
 	// TODO: implement
+	printf("\n%d", cell->i);
 
-	free(cell);
+	//free(cell);
 
 	return NULL;
 }
@@ -130,8 +130,30 @@ pthread_t **multiply(int **a, int **b, int **c, int m, int k, int n)
 {
 	pthread_t **tids = alloc_tids(m, n);
 
-	// TODO: implement
+	// TODO: implement	DONE
+	// Package parameters into a MATRIX_CELL object
+	MATRIX_CELL *cell = (MATRIX_CELL *) malloc(sizeof(MATRIX_CELL));
+	cell->i = m;
+	cell->j = n;
+	cell->k = k;
+	cell->a = a;
+	cell->b = b;
+	cell->c = c;
 
+	// Making threads
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			pthread_create(&(tids[i][j]), NULL, matrixThread, (void*) cell);	// I think I am passing cell incorrectly since in matrixThread, there is nothing
+		}
+	}
+
+	// Join threads
+	join(tids, m, n);
+
+	// Free threads after done
+	free_tids(tids, m);	
 	return tids;
 }
 
@@ -143,26 +165,10 @@ pthread_t **alloc_tids(int m, int n)
 
 	// Allocating threads, one thread per element in matrix C
 	tids  = (pthread_t**) malloc(m*sizeof(pthread_t*));
-	if(tids != NULL)
-	{
-		puts("\nyes tids");
-	}
-	else
-	{
-		puts("\nno tids");
-	}
 
 	for (int i = 0; i < m; i++)
 	{
 		tids[i] = (pthread_t*) malloc(n*sizeof(pthread_t));
-		if(tids[i] != NULL)
-		{
-			printf("\nyes tids[%d]", i);
-		}
-		else
-		{
-			printf("\nno tids[%d]", i);
-		}
 	}
 
 	return tids;
@@ -181,12 +187,19 @@ void free_tids(pthread_t **tids, int m)
 
 void join(pthread_t **tids, int m, int n)
 {
-	// TODO: implement
+	// TODO: implement DONE
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			pthread_join(tids[i][j], NULL);
+		}
+	}
 }
 
 void displayMatrix(int **matrix, int m, int n)
 {
-	// TODO: implement
+	// TODO: implement DONE
 	for (int i = 0; i < m; i++)
 	{
 		for (int j = 0; j < n; j++)
