@@ -1,3 +1,9 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 06
+ * Date: 03/09/2020
+ **/
+
 #ifndef _CPU_SCHEDULER_H
 #define _CPU_SCHEDULER_H
 

@@ -1,3 +1,9 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 06
+ * Date: 03/09/2020
+ **/
+
 #ifndef _PROCESS_QUEUE_H
 #define _PROCESS_QUEUE_H
 
