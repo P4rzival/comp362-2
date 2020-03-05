@@ -20,7 +20,7 @@ typedef struct process
     char name[8];
     int entryTime; // time of entry to the system
     int burstTime; // tick to run
-    int offTime; // time when cpu lost
+    int offTime; // time when taken off cpu 
     int waitTime; // accumulative waiting time
     struct process *previous; // used in the management of the ready queue
     struct process *next; // used in the management of the ready queue
