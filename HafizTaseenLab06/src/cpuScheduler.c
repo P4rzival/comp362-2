@@ -114,13 +114,22 @@ void fcfsStep(void *param)
 }
 
 /***
- * function implementing a step of SJF
+ * function implementing a step of SJF (non-preemptive)
  */
 void sjfStep(void *param)
 {
 
-// TODO: implement
+// TODO: implement DONE
 
+    ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
+
+    //if the cpu has nothing currently executing
+    if (p->cpu == NULL || p->cpu->burstTime == 0)
+    {
+        p->cpu = findShortestProcessInReadyQueue(); //start executing the shortest process in the ready queue
+        if (p->cpu != NULL)
+            p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+    }
 }
 
 /***
