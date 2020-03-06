@@ -150,7 +150,7 @@ void srtfStep(void *param)
 		if (p->cpu != NULL)
 			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
 	}
-	else	// Process is currently executing, compare the shortest process in ready queue, if it is shorter, replace, if not, continue as normal
+	else	// Process is currently executing, compare the shortest process in ready queue, if it is shorter, replace and add current process to ready queue, if not, continue as normal
 	{
 		cmprTmp = findShortestProcessInReadyQueue();
 		if(p->cpu->burstTime > cmprTmp->burstTime)
