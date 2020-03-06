@@ -12,81 +12,81 @@ int main(int argc, char **argv)
 {
 
 #ifdef _DEBUG
-    if (argc > 1)
-    {
-        freopen(argv[1], "r", stdin);
-        printf("Reading input from file %ss.\n\n", argv[1]);
-    }
-    else
-        printf("Reading input from stdin.\n\n");
+	if (argc > 1)
+	{
+		freopen(argv[1], "r", stdin);
+		printf("Reading input from file %ss.\n\n", argv[1]);
+	}
+	else
+		printf("Reading input from stdin.\n\n");
 #endif
 
-    int time = 0; // simulated time
+	int time = 0; // simulated time
 
-    ALGORITHM_PARAMS parameters = {
-            .cpu = NULL, .algorithm = "",
-            .step = NULL, .quantum = 0,
-            .time = 0
-    }; // simulation parameters
+	ALGORITHM_PARAMS parameters = {
+		.cpu = NULL, .algorithm = "",
+		.step = NULL, .quantum = 0,
+		.time = 0
+	}; // simulation parameters
 
-    // read the algorithm type and time quantum if necessary
-    scanf("%s", parameters.algorithm);
+	// read the algorithm type and time quantum if necessary
+	scanf("%s", parameters.algorithm);
 
-    //check which algorithm was passed, set values accordingly
-    if (strcmp(parameters.algorithm, "RR") == 0)
-    {
-        scanf("%d", &parameters.quantum);
-        quantum = parameters.quantum;
-        parameters.step = &rrStep;
-    }
-    else if (strcmp(parameters.algorithm, "FCFS") == 0)
-        parameters.step = &fcfsStep;
-    else if (strcmp(parameters.algorithm, "SJF") == 0)
-        parameters.step = &sjfStep;
-    else if (strcmp(parameters.algorithm, "SRTF") == 0)
-        parameters.step = &srtfStep;
-    else
-    {
-        printf("The job type input is not a valid input!");
-        exit(EXIT_FAILURE);
-    }
+	//check which algorithm was passed, set values accordingly
+	if (strcmp(parameters.algorithm, "RR") == 0)
+	{
+		scanf("%d", &parameters.quantum);
+		quantum = parameters.quantum;
+		parameters.step = &rrStep;
+	}
+	else if (strcmp(parameters.algorithm, "FCFS") == 0)
+		parameters.step = &fcfsStep;
+	else if (strcmp(parameters.algorithm, "SJF") == 0)
+		parameters.step = &sjfStep;
+	else if (strcmp(parameters.algorithm, "SRTF") == 0)
+		parameters.step = &srtfStep;
+	else
+	{
+		printf("The job type input is not a valid input!");
+		exit(EXIT_FAILURE);
+	}
 
-    scanf("\n"); // skip over the end of line marker
+	scanf("\n"); // skip over the end of line marker
 
-    printf("\nALGORITHM: %s", parameters.algorithm);
-    if (strcmp(parameters.algorithm, "RR") == 0)
-        printf("%3d", parameters.quantum);
-    printf("\n\n");
+	printf("\nALGORITHM: %s", parameters.algorithm);
+	if (strcmp(parameters.algorithm, "RR") == 0)
+		printf("%3d", parameters.quantum);
+	printf("\n\n");
 
-    createProcessTable(INITIAL_CAPACITY); //create process table
-    createReadyQueue(INITIAL_CAPACITY); //create ready queue
+	createProcessTable(INITIAL_CAPACITY); //create process table
+	createReadyQueue(INITIAL_CAPACITY); //create ready queue
 
-    readProcessTable(); //populate global process table
-    displayProcessTable();
+	readProcessTable(); //populate global process table
+	displayProcessTable();
 
-    printf("SIMULATION:\n\n");
+	printf("SIMULATION:\n\n");
 
-    while (processesLeftToExecute())
-    {
-        addArrivingProcessesToReadyQueue(time);
+	while (processesLeftToExecute())
+	{
+		addArrivingProcessesToReadyQueue(time);
 
-        parameters.time = time;
+		parameters.time = time;
 
-        doStep(parameters.step, &parameters);
+		doStep(parameters.step, &parameters);
 
-        displayTimeTick(time, parameters.cpu);
+		displayTimeTick(time, parameters.cpu);
 
-        if (parameters.cpu != NULL)
-            parameters.cpu->burstTime--;
+		if (parameters.cpu != NULL)
+			parameters.cpu->burstTime--;
 
-        time++;
-    }
+		time++;
+	}
 
-    printAverageWaitTime();
+	printAverageWaitTime();
 
-    cleanUp();
+	cleanUp();
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
 
 /***
@@ -94,7 +94,7 @@ int main(int argc, char **argv)
  */
 void doStep(void (*func)(void *), void *param)
 {
-    func(param);
+	func(param);
 }
 
 /***
@@ -102,15 +102,15 @@ void doStep(void (*func)(void *), void *param)
  */
 void fcfsStep(void *param)
 {
-    ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
+	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
 
-    //if the cpu has nothing currently executing
-    if (p->cpu == NULL || p->cpu->burstTime == 0)
-    {
-        p->cpu = fetchFirstProcessFromReadyQueue(); //start executing the first process in the ready queue
-        if (p->cpu != NULL)
-            p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
-    }
+	//if the cpu has nothing currently executing
+	if (p->cpu == NULL || p->cpu->burstTime == 0)
+	{
+		p->cpu = fetchFirstProcessFromReadyQueue(); //start executing the first process in the ready queue
+		if (p->cpu != NULL)
+			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+	}
 }
 
 /***
@@ -119,27 +119,48 @@ void fcfsStep(void *param)
 void sjfStep(void *param)
 {
 
-// TODO: implement DONE
+	// TODO: implement DONE
 
-    ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
+	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
 
-    //if the cpu has nothing currently executing
-    if (p->cpu == NULL || p->cpu->burstTime == 0)
-    {
-        p->cpu = findShortestProcessInReadyQueue(); //start executing the shortest process in the ready queue
-        if (p->cpu != NULL)
-            p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
-    }
+	//if the cpu has nothing currently executing
+	if (p->cpu == NULL || p->cpu->burstTime == 0)
+	{
+		p->cpu = findShortestProcessInReadyQueue(); //start executing the shortest process in the ready queue
+		removeProcessFromReadyQueue(p->cpu); // removes the shortest process from ready queue since findShortestProcessInReadyQueue() only finds the process, not fetch it
+		if (p->cpu != NULL)
+			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+	}
 }
 
 /***
- * function implementing a step of SRTF
+ * function implementing a step of SRTF (preemptive SJF)
  */
 void srtfStep(void *param)
 {
 
-// TODO: implement
+	// TODO: implement DONE
+	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
+	PROCESS cmprTmp;	// For checking current process has shortest burst time
 
+	//if the cpu has nothing currently executing
+	if (p->cpu == NULL || p->cpu->burstTime == 0)
+	{
+		p->cpu = findShortestProcessInReadyQueue(); //start executing the shortest process in the ready queue
+		if (p->cpu != NULL)
+			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+	}
+	else	// Process is currently executing, compare the shortest process in ready queue, if it is shorter, replace, if not, continue as normal
+	{
+		cmprTmp = findShortestProcessInReadyQueue();
+		if(p->cpu->burstTime > cmprTmp->burstTime)
+		{
+			addProcessToReadyQueue(p->cpu);
+			p->cpu = cmprTmp;
+			removeProcessFromReadyQueue(cmprTmp);			
+		}
+		p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+	}
 }
 
 /***
@@ -148,7 +169,7 @@ void srtfStep(void *param)
 void rrStep(void *param)
 {
 
-// TODO: implement
+	// TODO: implement
 
 }
 
@@ -157,56 +178,56 @@ void rrStep(void *param)
  */
 int readProcessTable()
 {
-    PROCESS tempProcess = {
-            .name = "",
-            .entryTime = 0,
-            .burstTime = 0,
-            .offTime = 0,
-            .waitTime = 0,
-            .previous = NULL,
-            .next = NULL
-    };
+	PROCESS tempProcess = {
+		.name = "",
+		.entryTime = 0,
+		.burstTime = 0,
+		.offTime = 0,
+		.waitTime = 0,
+		.previous = NULL,
+		.next = NULL
+	};
 
-    char *line = NULL;
-    char *currPos;
-    size_t len = 0;
+	char *line = NULL;
+	char *currPos;
+	size_t len = 0;
 
-    int counter = 0;
-    int offset = 0;
+	int counter = 0;
+	int offset = 0;
 
-    while (getline(&line, &len, stdin) != -1)
-    {
-        currPos = line;
-        sscanf(currPos, "%s%n", tempProcess.name, &offset);
-        currPos += offset;
-        sscanf(currPos, "%d%n", &tempProcess.entryTime, &offset);
-        tempProcess.offTime = tempProcess.entryTime; // simplifies computation of the wait time
-        currPos += offset;
-        sscanf(currPos, "%d", &tempProcess.burstTime);
+	while (getline(&line, &len, stdin) != -1)
+	{
+		currPos = line;
+		sscanf(currPos, "%s%n", tempProcess.name, &offset);
+		currPos += offset;
+		sscanf(currPos, "%d%n", &tempProcess.entryTime, &offset);
+		tempProcess.offTime = tempProcess.entryTime; // simplifies computation of the wait time
+		currPos += offset;
+		sscanf(currPos, "%d", &tempProcess.burstTime);
 
-        tempProcess.previous = NULL;
-        tempProcess.next = NULL;
+		tempProcess.previous = NULL;
+		tempProcess.next = NULL;
 
-        addProcessToTable(tempProcess);
+		addProcessToTable(tempProcess);
 
-        counter++;
-    }
+		counter++;
+	}
 
-    free(line);
+	free(line);
 
-    return counter;
+	return counter;
 }
 
 void displayTimeTick(int time, PROCESS *cpu)
 {
-    printf("T%d:\nCPU: ", time);
-    if (cpu == NULL)
-        printf("<idle>\n");
-    else
-        printf("%s(%d)\n", cpu->name, cpu->burstTime);
+	printf("T%d:\nCPU: ", time);
+	if (cpu == NULL)
+		printf("<idle>\n");
+	else
+		printf("%s(%d)\n", cpu->name, cpu->burstTime);
 
-    displayQueue();
-    printf("\n\n");
+	displayQueue();
+	printf("\n\n");
 }
 
 
