@@ -169,8 +169,16 @@ void srtfStep(void *param)
 void rrStep(void *param)
 {
 
-	// TODO: implement
+	// TODO: implement NOT DONE
+	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
 
+	//if the cpu has nothing currently executing or if quantum ran out ((could also use (p->cpu->burstTime % p->quantum) == 0) to check if process' time ran out)
+	if (p->cpu == NULL || p->cpu->burstTime == 0 || p->quantum == 0)
+	{
+		p->cpu = fetchFirstProcessFromReadyQueue(); //start executing the first process in the ready queue
+		if (p->cpu != NULL)
+			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+	}
 }
 
 /***
