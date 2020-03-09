@@ -170,21 +170,22 @@ void srtfStep(void *param)
 void rrStep(void *param)
 {
 
-	// TODO: implement NOT DONE
+	// TODO: implement DONE
 	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
-	//	printf("\nquantum: %d", quantum);	// Not sure why this line is not reached
 	//if the cpu has nothing currently executing or if quantum ran out ((could also use ((p->cpu->burstTime % p->quantum) == 0) to check if process' time ran out)
 	if (p->cpu == NULL || p->cpu->burstTime == 0 || p->quantum == 0)
 	{
+		if(p->quantum == 0 && p->cpu != NULL)
+		{
+			p->cpu->offTime = p->time;	// Sets offTime to current time so if process is put back onto the cpu, the difference with the current time is how long it waited on the queue since the last time it was on the cpu
+			addProcessToReadyQueue(p->cpu);
+		}
 		p->quantum = quantum; // Resets quantum counter
 		p->cpu = fetchFirstProcessFromReadyQueue(); //start executing the first process in the ready queue
 		if (p->cpu != NULL)
-			p->cpu->waitTime += p->time - p->cpu->entryTime; // update the wait time
+			p->cpu->waitTime += p->time - p->cpu->offTime; // update the wait time
 	}
-	else	// Process is currently executing,
-		{
-
-		}
+	p->quantum--;
 }
 
 /***
