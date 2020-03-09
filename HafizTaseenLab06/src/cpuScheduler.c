@@ -155,12 +155,13 @@ void srtfStep(void *param)
 		cmprTmp = findShortestProcessInReadyQueue();
 		if(p->cpu->burstTime > cmprTmp->burstTime)
 		{
+			p->cpu->entryTime = p->time;	// Sets entry time to current time for waitTime calculation
 			addProcessToReadyQueue(p->cpu);
 			p->cpu = cmprTmp;
 			removeProcessFromReadyQueue(cmprTmp);			
 		}
-		p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
 	}
+		p->cpu->waitTime += p->time - p->cpu->entryTime; // update the wait time
 }
 
 /***
