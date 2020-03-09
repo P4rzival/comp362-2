@@ -141,27 +141,27 @@ void srtfStep(void *param)
 
 	// TODO: implement DONE
 	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
-	PROCESS cmprTmp;	// For checking current process has shortest burst time
+	PROCESS* cmprTmp;	// For checking current process has shortest burst time
 
 	//if the cpu has nothing currently executing
 	if (p->cpu == NULL || p->cpu->burstTime == 0)
 	{
 		p->cpu = findShortestProcessInReadyQueue(); //start executing the shortest process in the ready queue
 		if (p->cpu != NULL)
-			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+			p->cpu->waitTime += p->time - p->cpu->offTime; // update the wait time
 	}
 	else	// Process is currently executing, compare the shortest process in ready queue, if it is shorter, replace and add current process to ready queue, if not, continue as normal
 	{
 		cmprTmp = findShortestProcessInReadyQueue();
 		if(p->cpu->burstTime > cmprTmp->burstTime)
 		{
-			p->cpu->entryTime = p->time;	// Sets entry time to current time for waitTime calculation
+			p->cpu->offTime = p->time;	// Sets offTime to current time so if process is put back onto the cpu, the difference with the current time is how long it waited on the queue since the last time it was on the cpu
 			addProcessToReadyQueue(p->cpu);
 			p->cpu = cmprTmp;
 			removeProcessFromReadyQueue(cmprTmp);			
+			p->cpu->waitTime += p->time - p->cpu->offTime; // update the wait time
 		}
 	}
-		p->cpu->waitTime += p->time - p->cpu->entryTime; // update the wait time
 }
 
 /***
@@ -172,14 +172,19 @@ void rrStep(void *param)
 
 	// TODO: implement NOT DONE
 	ALGORITHM_PARAMS *p = (ALGORITHM_PARAMS *) param;
-
-	//if the cpu has nothing currently executing or if quantum ran out ((could also use (p->cpu->burstTime % p->quantum) == 0) to check if process' time ran out)
+	//	printf("\nquantum: %d", quantum);	// Not sure why this line is not reached
+	//if the cpu has nothing currently executing or if quantum ran out ((could also use ((p->cpu->burstTime % p->quantum) == 0) to check if process' time ran out)
 	if (p->cpu == NULL || p->cpu->burstTime == 0 || p->quantum == 0)
 	{
+		p->quantum = quantum; // Resets quantum counter
 		p->cpu = fetchFirstProcessFromReadyQueue(); //start executing the first process in the ready queue
 		if (p->cpu != NULL)
-			p->cpu->waitTime = p->time - p->cpu->entryTime; // update the wait time
+			p->cpu->waitTime += p->time - p->cpu->entryTime; // update the wait time
 	}
+	else	// Process is currently executing,
+		{
+
+		}
 }
 
 /***
