@@ -20,8 +20,8 @@ PROCESS *readyQueueTail = NULL;
  */
 void createProcessTable(int capacity)
 {
-    processTable = (PROCESS *) malloc(capacity * sizeof(PROCESS));
-    processTableCapacity = capacity;
+	processTable = (PROCESS *) malloc(capacity * sizeof(PROCESS));
+	processTableCapacity = capacity;
 }
 
 /***
@@ -29,8 +29,8 @@ void createProcessTable(int capacity)
  */
 void createReadyQueue(int capacity)
 {
-    readyQueueHead = NULL;
-    readyQueueTail = NULL;
+	readyQueueHead = NULL;
+	readyQueueTail = NULL;
 }
 
 /***
@@ -38,14 +38,15 @@ void createReadyQueue(int capacity)
  */
 void addProcessToTable(PROCESS process)
 {
-    if (processTableSize >= processTableCapacity) //if array too small
-    {
-        processTableCapacity *= 2; //double capacity
-        processTable = (PROCESS *) realloc(processTable, processTableCapacity * sizeof(PROCESS));
-    }
+	if (processTableSize >= processTableCapacity) //if array too small
+	{
+		processTableCapacity *= 2; //double capacity
+		processTable = (PROCESS *) realloc(processTable, processTableCapacity * sizeof(PROCESS));
+	}
 
-// TODO: complete
-
+	// TODO: complete DONE
+	processTable[processTableSize] = process;
+	processTableSize++;
 }
 
 /***
@@ -53,12 +54,12 @@ void addProcessToTable(PROCESS process)
  */
 void displayProcessTable()
 {
-    printf("PROCESSES:\n\nName    \tEntry\tBurst\n");
-    for (int i = 0; i < processTableSize; i++)
-    {
-        printf("%-8s\t%3d   \t%3d   \n", processTable[i].name, processTable[i].entryTime, processTable[i].burstTime);
-    }
-    printf("\n");
+	printf("PROCESSES:\n\nName    \tEntry\tBurst\n");
+	for (int i = 0; i < processTableSize; i++)
+	{
+		printf("%-8s\t%3d   \t%3d   \n", processTable[i].name, processTable[i].entryTime, processTable[i].burstTime);
+	}
+	printf("\n");
 }
 
 /***
@@ -66,9 +67,9 @@ void displayProcessTable()
  */
 bool processesLeftToExecute()
 {
-// TODO: implement
+	// TODO: implement
 
-    return false; //return 0 if all processes are complete
+	return false; //return 0 if all processes are complete
 }
 
 /***
@@ -76,7 +77,7 @@ bool processesLeftToExecute()
  */
 void addArrivingProcessesToReadyQueue(int time)
 {
-// TODO: implement
+	// TODO: implement
 }
 
 /***
@@ -84,7 +85,7 @@ void addArrivingProcessesToReadyQueue(int time)
  */
 void addProcessToReadyQueue(PROCESS *process)
 {
-// TODO: implement
+	// TODO: implement
 }
 
 /***
@@ -92,7 +93,7 @@ void addProcessToReadyQueue(PROCESS *process)
  */
 void removeProcessFromReadyQueue(PROCESS *process)
 {
-// TODO: implement
+	// TODO: implement
 }
 
 /***
@@ -100,9 +101,9 @@ void removeProcessFromReadyQueue(PROCESS *process)
  */
 PROCESS *fetchFirstProcessFromReadyQueue()
 {
-// TODO: implement
+	// TODO: implement
 
-    return NULL;
+	return NULL;
 }
 
 /***
@@ -110,9 +111,9 @@ PROCESS *fetchFirstProcessFromReadyQueue()
  */
 PROCESS *findShortestProcessInReadyQueue()
 {
-// TODO: implement
+	// TODO: implement
 
-    return NULL;
+	return NULL;
 }
 
 /***
@@ -120,17 +121,17 @@ PROCESS *findShortestProcessInReadyQueue()
  */
 void displayQueue()
 {
-    printf("QUEUE: ");
+	printf("QUEUE: ");
 
-    if (readyQueueHead == NULL)
-        printf("<empty>");
-    else
-    {
-        for (PROCESS *curr = readyQueueHead; curr != NULL; curr = curr->next)
-        {
-            printf("%s(%d) ", curr->name, curr->burstTime);
-        }
-    }
+	if (readyQueueHead == NULL)
+		printf("<empty>");
+	else
+	{
+		for (PROCESS *curr = readyQueueHead; curr != NULL; curr = curr->next)
+		{
+			printf("%s(%d) ", curr->name, curr->burstTime);
+		}
+	}
 }
 
 /***
@@ -138,14 +139,14 @@ void displayQueue()
  */
 void printAverageWaitTime()
 {
-    int i = 0;
-    double sum = 0;
-    for (i = 0; i < processTableSize; i++)
-    {
-        sum = sum + processTable[i].waitTime;
-        printf("Process %s Wait Time: %.2lf\n", processTable[i].name, (double) processTable[i].waitTime);
-    }
-    printf("Average Wait Time: %.2lf\n", (sum / (double) processTableSize));
+	int i = 0;
+	double sum = 0;
+	for (i = 0; i < processTableSize; i++)
+	{
+		sum = sum + processTable[i].waitTime;
+		printf("Process %s Wait Time: %.2lf\n", processTable[i].name, (double) processTable[i].waitTime);
+	}
+	printf("Average Wait Time: %.2lf\n", (sum / (double) processTableSize));
 }
 
 /***
@@ -153,7 +154,7 @@ void printAverageWaitTime()
  */
 void cleanUp()
 {
-// TODO: implement
+	// TODO: implement
 }
 
 
