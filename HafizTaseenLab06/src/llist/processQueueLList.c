@@ -67,8 +67,14 @@ void displayProcessTable()
  */
 bool processesLeftToExecute()
 {
-	// TODO: implement
-
+	// TODO: implement DONE
+	for (int i = 0; i < processTableSize; i++)
+	{
+		if(processTable[i].burstTime != 0)
+		{
+			return true;
+		}
+	}
 	return false; //return 0 if all processes are complete
 }
 
