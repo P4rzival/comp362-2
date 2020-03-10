@@ -118,7 +118,14 @@ void addArrivingProcessesToReadyQueue(int time)
  */
 void addProcessToReadyQueue(PROCESS *process)
 {
-	// TODO: implement
+	// TODO: implement DONE?
+//	PROCESS* newP = (PROCESS *) malloc(sizeof(PROCESS));
+//	newP = process;
+	printf("\nname: %s", process->name);
+	process->next = NULL;
+	process->previous = readyQueueTail;
+	readyQueueTail->next = process;
+	readyQueueTail = process;
 }
 
 /***
