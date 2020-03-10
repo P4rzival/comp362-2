@@ -139,7 +139,7 @@ void removeProcessFromReadyQueue(PROCESS *process)
 
 		matchP = matchP->next;
 	}
-	
+
 	if(strcmp(process->name, matchP->name) == 0)
 	{
 		if(matchP == readyQueueHead)
@@ -158,9 +158,9 @@ void removeProcessFromReadyQueue(PROCESS *process)
 		free(matchP);
 	}
 	else if(matchP->next == NULL)
-		{
-			puts("\nSomething went wrong");
-		}
+	{
+		puts("\nSomething went wrong");
+	}
 }
 
 /***
@@ -177,9 +177,22 @@ PROCESS *fetchFirstProcessFromReadyQueue()
  */
 PROCESS *findShortestProcessInReadyQueue()
 {
-	// TODO: implement
-
-	return NULL;
+	// TODO: implement DONE
+	PROCESS* shortP = readyQueueHead;
+	PROCESS* tempP = readyQueueHead;
+	if(tempP->next != NULL)
+	{
+		tempP = tempP->next;
+	}
+	while(tempP->next != NULL)
+	{
+		if(tempP->burstTime < shortP->burstTime)
+		{
+			shortP = tempP;
+		}
+		tempP = tempP->next;
+	}
+	return shortP;
 }
 
 /***
@@ -221,7 +234,7 @@ void printAverageWaitTime()
 void cleanUp()
 {
 	// TODO: implement	DONE
-for (int i = 0; i < processTableSize; i++)
+	for (int i = 0; i < processTableSize; i++)
 	{
 		free((&processTable[i]));
 	}
