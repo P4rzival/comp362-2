@@ -68,14 +68,19 @@ void displayProcessTable()
 bool processesLeftToExecute()
 {
 	// TODO: implement DONE
+	bool returnFlag;
 	for (int i = 0; i < processTableSize; i++)
 	{
 		if(processTable[i].burstTime != 0)
 		{
-			return true;
+			returnFlag = true;
+		}
+		else
+		{
+			returnFlag = false;
 		}
 	}
-	return false; //return 0 if all processes are complete
+	return returnFlag;	 //return 0 if all processes are complete
 }
 
 /***
@@ -83,7 +88,29 @@ bool processesLeftToExecute()
  */
 void addArrivingProcessesToReadyQueue(int time)
 {
-	// TODO: implement
+	// TODO: implement DONE
+	for (int i = 0; i < processTableSize; i++)
+	{
+		if(processTable[i].entryTime == time)
+		{
+			PROCESS* newP = (PROCESS *) malloc(sizeof(PROCESS));
+			(*newP) = processTable[i];
+			if(readyQueueHead == NULL && readyQueueTail == NULL)	// If there is nothing in the ready queue
+			{
+				newP->next = NULL;
+				newP->previous = NULL;
+				readyQueueHead = newP;
+				readyQueueTail = newP;
+			}
+			else
+			{
+				newP->next = NULL;
+				newP->previous = readyQueueTail;
+				readyQueueTail->next = newP;
+				readyQueueTail = newP;
+			}
+		}
+	}
 }
 
 /***
