@@ -93,21 +93,19 @@ void addArrivingProcessesToReadyQueue(int time)
 	{
 		if(processTable[i].entryTime == time)
 		{
-			PROCESS* newP = (PROCESS *) malloc(sizeof(PROCESS));
-			(*newP) = processTable[i];
 			if(readyQueueHead == NULL && readyQueueTail == NULL)	// If there is nothing in the ready queue
 			{
-				newP->next = NULL;
-				newP->previous = NULL;
-				readyQueueHead = newP;
-				readyQueueTail = newP;
+				(&processTable[i])->next = NULL;
+				(&processTable[i])->previous = NULL;
+				readyQueueHead = (&processTable[i]);
+				readyQueueTail = (&processTable[i]);
 			}
 			else
 			{
-				newP->next = NULL;
-				newP->previous = readyQueueTail;
-				readyQueueTail->next = newP;
-				readyQueueTail = newP;
+				(&processTable[i])->next = NULL;
+				(&processTable[i])->previous = readyQueueTail;
+				readyQueueTail->next = (&processTable[i]);
+				readyQueueTail = (&processTable[i]);
 			}
 		}
 	}
