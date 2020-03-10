@@ -118,14 +118,15 @@ void addArrivingProcessesToReadyQueue(int time)
  */
 void addProcessToReadyQueue(PROCESS *process)
 {
-	// TODO: implement DONE?
-//	PROCESS* newP = (PROCESS *) malloc(sizeof(PROCESS));
-//	newP = process;
-	printf("\nname: %s", process->name);
-	process->next = NULL;
-	process->previous = readyQueueTail;
-	readyQueueTail->next = process;
-	readyQueueTail = process;
+	// TODO: implement DONE
+	PROCESS* newP = (PROCESS *) malloc(sizeof(PROCESS));
+	(*newP) = (*process);
+	//	printf("\nnameP: %s nameNewP: %s", process->name, newP->name);
+
+	newP->next = NULL;
+	newP->previous = readyQueueTail;
+	readyQueueTail->next = newP;
+	readyQueueTail = newP;
 }
 
 /***
@@ -133,7 +134,35 @@ void addProcessToReadyQueue(PROCESS *process)
  */
 void removeProcessFromReadyQueue(PROCESS *process)
 {
-	// TODO: implement
+	// TODO: implement	DONE
+	PROCESS* matchP = readyQueueHead;
+	while((strcmp(process->name, matchP->name) != 0) || matchP->next != NULL)
+	{
+
+		matchP = matchP->next;
+	}
+	
+	if(strcmp(process->name, matchP->name) == 0)
+	{
+		if(matchP == readyQueueHead)
+		{
+			readyQueueHead = readyQueueHead->next;
+		}
+		else if(matchP == readyQueueTail)
+		{
+			readyQueueTail = readyQueueTail->previous;
+		}
+		else
+		{
+			matchP->previous->next = matchP->next;
+			matchP->next->previous = matchP->previous;
+		}
+		free(matchP);
+	}
+	else if(matchP->next == NULL)
+		{
+			puts("\nSomething went wrong");
+		}
 }
 
 /***
@@ -141,9 +170,8 @@ void removeProcessFromReadyQueue(PROCESS *process)
  */
 PROCESS *fetchFirstProcessFromReadyQueue()
 {
-	// TODO: implement
-
-	return NULL;
+	// TODO: implement DONE
+	return readyQueueHead;
 }
 
 /***
@@ -194,9 +222,12 @@ void printAverageWaitTime()
  */
 void cleanUp()
 {
-	// TODO: implement
+	// TODO: implement	DONE
+for (int i = 0; i < processTableSize; i++)
+	{
+		free((&processTable[i]));
+	}
 }
-
 
 
 
