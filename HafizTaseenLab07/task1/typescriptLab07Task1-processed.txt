@@ -1,0 +1,354 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 07 task 1
+ * Date: 03/16/2020
+ **/
+
+Script started on 2020-03-10 17:11:43-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="54"]
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1$ cd cmake/
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ make
+[ 16%] Built target semaphore
+[ 33%] Built target buffer
+[ 50%] Built target mutex
+[ 66%] Built target condvar
+[ 83%] Built target mutex_spinlock
+[100%] Built target readwrite
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/buffer55 2 2 3
+3
+Producer produced 1463697208
+Consumer consumed 1463697208
+Producer produced 1489007346
+Consumer consumed 1489007346
+Producer produced 230462849
+Consumer consumed 230462849
+Producer produced 1650834560
+Consumer consumed 1650834560
+Producer produced 587599721
+Consumer consumed 587599721
+Producer produced 151336040
+Consumer consumed 151336040
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/buffer 5 2 2 3
+
+
+
+Usage: buffer simulationLength producerThreads consumerThreads bufferSize
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/buffer
+Usage: buffer simulationLength producerThreads consumerThreads bufferSize
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/buffer 5 2 2 3
+3
+Producer produced 629287737
+Consumer consumed 629287737
+Producer produced 568430535
+Consumer consumed 568430535
+Producer produced 93031314
+Consumer consumed 93031314
+Consumer consumed 325010082
+Producer produced 325010082
+Producer produced 278109817
+Consumer consumed 278109817
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/buffer 5 2 2 3
+
+
+5 2 2 3
+
+
+5 2 2 3
+
+
+/
+buffer		condvar 	mutex		mutex_spinlock	readwrite	semaphore
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/condvar
+Usage: condvar countingTarget numberOfCounters countCeiling sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/condvar 1 1 1
+1
+Counter 78d4b700:  started with count limit of 0.
+Wacther 7854a700: started.
+Watcher 7854a700: waiting for a signal.
+g
+^C
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/condvar 1 1 1 1
+
+
+122 10
+ 10
+Counter 2689e700:  started with count limit of 3.
+Counter 2689e700, count = 1:  threshold reached.
+Counter 2689e700, count = 1: unlocking mutex.
+Counter 2609d700:  started with count limit of 6.
+Wacther 2589c700: started.
+Watcher 2589c700: waiting for a signal.
+^C
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/condvar 1 2 10 10
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ 1 1 1
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$
+
+buffer 5 2 2 3
+condvar
+
+1 1 1 1
+
+
+3 3
+2
+Counter fc9a6700:  started with count limit of 1.
+Counter fc9a6700, count = 1:  threshold reached.
+Counter fc9a6700, count = 1: unlocking mutex.
+Counter fc1a5700:  started with count limit of 1.
+Wacther fb1a3700: started.
+Watcher fb1a3700: waiting for a signal.
+Counter fb9a4700:  started with count limit of 0.
+^C
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/
+buffer		condvar 	mutex		mutex_spinlock	readwrite	semaphore
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex
+Usage: mutex numberOfBees maxIterations sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex 10 10 2
+Bee 94273846989408 created
+This 139858720077568 bee is bzziing for 0 seconds :-)
+Bee 94273846989416 created
+This 139858720077568 bee is bzziing for 1 seconds :-)
+Bee 94273846989424 created
+This 139858711684864 bee is bzziing for 0 seconds :-)
+Bee 94273846989432 created
+Bee 94273846989440 created
+This 139858703292160 bee is bzziing for 1 seconds :-)
+Bee 94273846989448 created
+This 139858694899456 bee is bzziing for 1 seconds :-)
+Bee 94273846989456 created
+This 139858686506752 bee is bzziing for 0 seconds :-)
+Bee 94273846989464 created
+This 139858711684864 bee is bzziing for 1 seconds :-)
+This 139858678114048 bee is bzziing for 1 seconds :-)
+Bee 94273846989472 created
+This 139858669721344 bee is bzziing for 1 seconds :-)
+Bee 94273846989480 created
+This 139858661328640 bee is bzziing for 1 seconds :-)
+This 139858686506752 bee is bzziing for 0 seconds :-)
+This 139858652935936 bee is bzziing for 0 seconds :-)
+This 139858644543232 bee is bzziing for 1 seconds :-)
+This 139858686506752 bee is bzziing for 0 seconds :-)
+This 139858720077568 bee is bzziing for 0 seconds :-)
+This 139858720077568 bee is bzziing for 0 seconds :-)
+This 139858703292160 bee is bzziing for 0 seconds :-)
+This 139858694899456 bee is bzziing for 1 seconds :-)
+This 139858703292160 bee is bzziing for 0 seconds :-)
+This 139858711684864 bee is bzziing for 1 seconds :-)
+This 139858703292160 bee is bzziing for 0 seconds :-)
+This 139858678114048 bee is bzziing for 0 seconds :-)
+This 139858703292160 bee is bzziing for 0 seconds :-)
+This 139858703292160 bee is bzziing for 0 seconds :-)
+This 139858661328640 bee is bzziing for 1 seconds :-)
+This 139858644543232 bee is bzziing for 0 seconds :-)
+This 139858644543232 bee is bzziing for 1 seconds :-)
+This 139858694899456 bee is bzziing for 1 seconds :-)
+This 139858711684864 bee is bzziing for 0 seconds :-)
+This 139858711684864 bee is bzziing for 0 seconds :-)
+This 139858711684864 bee is bzziing for 1 seconds :-)
+This 139858661328640 bee is bzziing for 0 seconds :-)
+This 139858661328640 bee is bzziing for 1 seconds :-)
+This 139858694899456 bee is bzziing for 0 seconds :-)
+This 139858694899456 bee is bzziing for 0 seconds :-)
+This 139858694899456 bee is bzziing for 1 seconds :-)
+This 139858694899456 bee is bzziing for 1 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex 10111 2
+Bee 94835058295392 created
+This 140612914841344 bee is bzziing for 0 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex 3 1 1
+Bee 94145116639840 created
+This 140080308119296 bee is bzziing for 0 seconds :-)
+Bee 94145116639848 created
+Bee 94145116639856 created
+This 140080299726592 bee is bzziing for 0 seconds :-)
+This 140080291333888 bee is bzziing for 0 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex 3 1 1
+bash: ./bin/: Is a directory
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/
+buffer		condvar 	mutex		mutex_spinlock	readwrite	semaphore
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex
+mutex		mutex_spinlock
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex_spinlock
+Usage: mutex_spinlock numberOfBees maxIterations sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex_spinlock 10 1 1
+mutex locks...
+Bee 139806549456640 created
+This 139806549456640 bee is bzziing for 0 seconds :-)
+Bee 139806541063936 created
+Bee 139806532671232 created
+This 139806541063936 bee is bzziing for 0 seconds :-)
+Bee 139806524278528 created
+This 139806532671232 bee is bzziing for 0 seconds :-)
+This 139806524278528 bee is bzziing for 0 seconds :-)
+Bee 139806515885824 created
+This 139806515885824 bee is bzziing for 0 seconds :-)
+Bee 139806507493120 created
+This 139806507493120 bee is bzziing for 0 seconds :-)
+Bee 139806498993920 created
+This 139806498993920 bee is bzziing for 0 seconds :-)
+Bee 139806419973888 created
+This 139806419973888 bee is bzziing for 0 seconds :-)
+Bee 139806411581184 created
+Bee 139806403188480 created
+This 139806411581184 bee is bzziing for 0 seconds :-)
+This 139806403188480 bee is bzziing for 0 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex_spinlock 10 1 10
+mutex locks...
+Bee 140300897326848 created
+This 140300897326848 bee is bzziing for 6 seconds :-)
+Bee 140300888934144 created
+This 140300888934144 bee is bzziing for 1 seconds :-)
+Bee 140300880541440 created
+Bee 140300872148736 created
+This 140300880541440 bee is bzziing for 8 seconds :-)
+This 140300872148736 bee is bzziing for 6 seconds :-)
+Bee 140300863756032 created
+This 140300863756032 bee is bzziing for 9 seconds :-)
+This 140300855363328 bee is bzziing for 6 seconds :-)
+Bee 140300855363328 created
+Bee 140300846970624 created
+Bee 140300838577920 created
+This 140300846970624 bee is bzziing for 5 seconds :-)
+This 140300838577920 bee is bzziing for 1 seconds :-)
+Bee 140300830185216 created
+This 140300830185216 bee is bzziing for 7 seconds :-)
+Bee 140300821792512 created
+This 140300821792512 bee is bzziing for 3 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/mutex_spinlock 10 1 10
+
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$
+
+readwrite
+Usage: readwrite countingTarget numberOfReaders numberOfWriters countCeiling sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/semaphore
+Usage: semaphore numberOfBees maxIterations sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bimutex_spinlock 10 1 10
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ readwrite
+
+5 2
+2 10
+Usage: readwrite countingTarget numberOfReaders numberOfWriters countCeiling sleepCeiling
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/readwrite 5 2 2 10 8
+Reader 5356f700 started.
+Reader 5356f700: count = 0.
+Reader 52d6e700 started.
+Reader 52d6e700: count = 0.
+Writer 5256d700 started with count limit of 2.
+Writer 5256d700: count = 1.
+Writer 51d6c700 started with count limit of 8.
+Writer 51d6c700: count = 2.
+Reader 5356f700: count = 2.
+Writer 5256d700: count = 3.
+Reader 52d6e700: count = 3.
+Reader 5356f700: count = 3.
+Reader 52d6e700: count = 3.
+Reader 52d6e700: count = 3.
+Writer 51d6c700: count = 4.
+Reader 5356f700: count = 4.
+Writer 51d6c700: count = 5.
+Back in main(). Joined on 4 threads. Done.
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/readwrite 5 2 2 10 8
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ semaphore
+
+10 1
+2 2
+Bee 93900419719776 created
+Bee 93900419719777 created
+Bee 93900419719778 created
+Bee 93900419719779 created
+Bee 93900419719780 created
+Bee 93900419719781 created
+Bee 93900419719782 created
+Bee 93900419719783 created
+Bee 93900419719784 created
+Bee 93900419719785 created
+This 140515380455168 bee is bzziing for 1 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515422418688 bee is bzziing for 1 seconds :-)
+This 140515405633280 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 1 seconds :-)
+This 140515388847872 bee is bzziing for 1 seconds :-)
+This 140515430811392 bee is bzziing for 1 seconds :-)
+This 140515414025984 bee is bzziing for 1 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515439204096 bee is bzziing for 1 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 0 seconds :-)
+This 140515422418688 bee is bzziing for 0 seconds :-)
+This 140515405633280 bee is bzziing for 1 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+This 140515422418688 bee is bzziing for 0 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515430811392 bee is bzziing for 0 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515414025984 bee is bzziing for 1 seconds :-)
+This 140515422418688 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515422418688 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515430811392 bee is bzziing for 0 seconds :-)
+This 140515380455168 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515430811392 bee is bzziing for 1 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515439204096 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 1 seconds :-)
+This 140515405633280 bee is bzziing for 1 seconds :-)
+This 140515447596800 bee is bzziing for 0 seconds :-)
+This 140515414025984 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515414025984 bee is bzziing for 1 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 0 seconds :-)
+This 140515422418688 bee is bzziing for 0 seconds :-)
+This 140515380455168 bee is bzziing for 1 seconds :-)
+This 140515430811392 bee is bzziing for 1 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+This 140515439204096 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515422418688 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515397240576 bee is bzziing for 1 seconds :-)
+This 140515405633280 bee is bzziing for 1 seconds :-)
+This 140515414025984 bee is bzziing for 0 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515414025984 bee is bzziing for 0 seconds :-)
+This 140515430811392 bee is bzziing for 1 seconds :-)
+This 140515439204096 bee is bzziing for 1 seconds :-)
+This 140515380455168 bee is bzziing for 0 seconds :-)
+This 140515422418688 bee is bzziing for 0 seconds :-)
+This 140515380455168 bee is bzziing for 1 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+This 140515397240576 bee is bzziing for 0 seconds :-)
+This 140515405633280 bee is bzziing for 0 seconds :-)
+This 140515405633280 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515430811392 bee is bzziing for 1 seconds :-)
+This 140515405633280 bee is bzziing for 0 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515405633280 bee is bzziing for 0 seconds :-)
+This 140515439204096 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 0 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+This 140515455989504 bee is bzziing for 0 seconds :-)
+This 140515430811392 bee is bzziing for 0 seconds :-)
+This 140515455989504 bee is bzziing for 1 seconds :-)
+This 140515447596800 bee is bzziing for 1 seconds :-)
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ ./bin/semaphore 10 12 2
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$
+
+
+buffer		condvar 	mutex		mutex_spinlock	readwrite	semaphore
+taseen.hafiz264@csuci.edu@124207:~/Desktop/comp362/HafizTaseenLab07/task1/cmake$ exitn/
+exit
+
+Script done on 2020-03-10 17:33:12-07:00 [COMMAND_EXIT_CODE="0"]
