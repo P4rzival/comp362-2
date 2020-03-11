@@ -169,7 +169,11 @@ void removeProcessFromReadyQueue(PROCESS *process)
 PROCESS *fetchFirstProcessFromReadyQueue()
 {
 	// TODO: implement DONE
-	return readyQueueHead;
+	PROCESS* returnP = readyQueueHead;
+	readyQueueHead = readyQueueHead->next;
+	readyQueueHead->previous = NULL;
+	returnP->next = NULL;
+	return returnP;
 }
 
 /***
