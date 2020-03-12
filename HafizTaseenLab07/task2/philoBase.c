@@ -1,3 +1,9 @@
+/**
+ * Name: Taseen Hafiz
+ * Lab/task: Lab 07 task 2
+ * Date: 03/16/2020
+ **/
+
 #include <pthread.h>
 #include <stdio.h>
 #include <unistd.h>
