@@ -1,3 +1,7 @@
+# Name: Taseen Hafiz
+# Lab/task: Lab 07 task 2
+# Date: 03/16/2020
+
 cmake_minimum_required(VERSION 3.8)
 
 project(philosophers)
@@ -13,7 +17,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 set(CMAKE_BUILD_TYPE Debug)
 
-set(SOURCE_FILES philoBase.c)
+set(SOURCE_FILES philoWithTryLock.c)
 
 add_executable(philosophers ${SOURCE_FILES})
 
